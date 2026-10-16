@@ -1,0 +1,20 @@
+{
+  "baseline": {
+    "predicted_events": 602,
+    "gold_events": 510,
+    "trigger_has_no_gold_overlap": 256,
+    "strictly_correct": 79,
+    "exact_trigger_but_wrong_event_fields": 239,
+    "trigger_overlaps_gold_but_wrong_boundary": 28,
+    "effect_near_miss_given_exact_trigger_drug_type": 33
+  },
+  "biomedbert": {
+    "predicted_events": 775,
+    "gold_events": 510,
+    "strictly_correct": 196,
+    "trigger_has_no_gold_overlap": 322,
+    "exact_trigger_but_wrong_event_fields": 201,
+    "effect_near_miss_given_exact_trigger_drug_type": 80,
+    "trigger_overlaps_gold_but_wrong_boundary": 56
+  }
+}

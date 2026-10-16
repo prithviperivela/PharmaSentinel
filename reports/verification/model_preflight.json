@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "passages_checked": 8,
+    "checkpoint_reload_matches": true,
+    "gold_independent_inference": true
+  },
+  "biomedbert": {
+    "passages_checked": 8,
+    "checkpoint_reload_matches": true,
+    "gold_independent_inference": true
+  }
+}

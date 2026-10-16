@@ -1,0 +1,22 @@
+{
+  "baseline": {
+    "passages_checked": 8,
+    "checkpoint_reload_matches": true,
+    "gold_independent_inference": true
+  },
+  "biomedbert": {
+    "passages_checked": 8,
+    "checkpoint_reload_matches": true,
+    "gold_independent_inference": true
+  },
+  "pharmasentinel_final": {
+    "passages_checked": 8,
+    "checkpoint_reload_matches": true,
+    "gold_independent_inference": true
+  },
+  "biomedbert_all_ce": {
+    "passages_checked": 8,
+    "checkpoint_reload_matches": true,
+    "gold_independent_inference": true
+  }
+}

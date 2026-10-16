@@ -1,0 +1,10 @@
+{
+  "pharmasentinel_final": {
+    "four_pages_passed": true,
+    "live_extraction_download": true
+  },
+  "biomedbert_all_ce": {
+    "four_pages_passed": true,
+    "live_extraction_download": true
+  }
+}

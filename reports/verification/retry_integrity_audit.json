@@ -1,0 +1,31 @@
+{
+  "baseline": {
+    "model_selection": {
+      "validated_predictions": 487,
+      "missing_prediction_passages": 0
+    },
+    "calibration": {
+      "validated_predictions": 222,
+      "missing_prediction_passages": 0
+    },
+    "policy": {
+      "validated_predictions": 252,
+      "missing_prediction_passages": 0
+    }
+  },
+  "biomedbert": {
+    "model_selection": {
+      "validated_predictions": 487,
+      "missing_prediction_passages": 0
+    },
+    "calibration": {
+      "validated_predictions": 222,
+      "missing_prediction_passages": 0
+    },
+    "policy": {
+      "validated_predictions": 252,
+      "missing_prediction_passages": 0
+    }
+  },
+  "final_test_prediction_files": []
+}

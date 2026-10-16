@@ -1,0 +1,13 @@
+{
+  "status": "ready_for_staged_retry",
+  "verified_at_utc": "2026-10-15T16:35:38.699334+00:00",
+  "tests_passed": 30,
+  "test_seconds": 53.02,
+  "lint": "passed",
+  "saved_development_prediction_identities_validated": 1922,
+  "new_training_runs_during_audit": 0,
+  "final_test_predictions_present": false,
+  "github_repository_created": false,
+  "publication_attempted": false,
+  "live_mysql_verified": false
+}

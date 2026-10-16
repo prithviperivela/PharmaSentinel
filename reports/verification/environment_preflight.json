@@ -1,0 +1,18 @@
+{
+  "environment": {
+    "python": "3.13.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "torch": "2.9.0+cu129",
+    "transformers": "5.16.1",
+    "numpy": "2.4.2",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.9.0",
+    "plotly": "7.1.0"
+  },
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "gradient_check": "passed",
+  "temporary_file_roundtrip": "passed",
+  "encoder_integrity": "passed",
+  "system_site_packages_inherited": true
+}
