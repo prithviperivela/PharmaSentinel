@@ -1,0 +1,33 @@
+{
+  "model": "biomedbert",
+  "encoder": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+  "encoder_revision": "e1354b7a3a09615f6aba48dfad4b7a613eef7062",
+  "seed": 42,
+  "epochs": 4,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "dropout": 0.1,
+  "max_tokens": 512,
+  "patience": 2,
+  "threads": 4,
+  "device": "cuda",
+  "freeze_encoder": false,
+  "note": "Adaptive development follow-up: therapeutic trigger weight 3 after minority recall failed; same selection safeguards.",
+  "class_weight_exponents": {
+    "trigger": 0.0,
+    "drug": 0.0,
+    "effect": 0.0
+  },
+  "prediction_splits": [
+    "model_selection"
+  ],
+  "class_weight_multipliers": {
+    "trigger": [
+      1,
+      1,
+      1,
+      3,
+      3
+    ]
+  }
+}

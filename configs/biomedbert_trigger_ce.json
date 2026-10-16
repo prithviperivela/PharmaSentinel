@@ -1,0 +1,24 @@
+{
+  "model": "biomedbert",
+  "encoder": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+  "encoder_revision": "e1354b7a3a09615f6aba48dfad4b7a613eef7062",
+  "seed": 42,
+  "epochs": 4,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "dropout": 0.1,
+  "max_tokens": 512,
+  "patience": 2,
+  "threads": 4,
+  "device": "cuda",
+  "freeze_encoder": false,
+  "note": "Controlled seed-42 four-epoch loss-weight ablation; model-selection only.",
+  "class_weight_exponents": {
+    "trigger": 0.0,
+    "drug": 0.5,
+    "effect": 0.5
+  },
+  "prediction_splits": [
+    "model_selection"
+  ]
+}

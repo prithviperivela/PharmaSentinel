@@ -1,0 +1,17 @@
+{
+  "model": "biomedbert",
+  "encoder": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+  "encoder_revision": "e1354b7a3a09615f6aba48dfad4b7a613eef7062",
+  "seed": 42,
+  "epochs": 4,
+  "batch_size": 4,
+  "learning_rate": 0.00002,
+  "dropout": 0.1,
+  "max_tokens": 512,
+  "patience": 2,
+  "threads": 4,
+  "device": "cpu",
+  "freeze_encoder": false,
+  "note": "Resolve encoder_revision to an immutable Hugging Face commit before training. CPU is the safe default; explicitly choose cuda only on a verified machine."
+}
+
