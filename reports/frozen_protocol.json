@@ -1,0 +1,76 @@
+{
+  "scope": "Frozen model, calibrator and review-policy procedure before test evaluation",
+  "frozen_at_utc": "2026-10-16T04:39:34.073954+00:00",
+  "prior_test_results_exist": false,
+  "models": {
+    "baseline": {
+      "calibrator.json": "c6b6665693da1fc300dfe71a5a297ef012230d08285be8adc0f685464dcb5750",
+      "config.json": "5b8efcb28876f64e505b4f0e9bcefeefabb9d50d467a2f85ede471df5156e7de",
+      "metadata.json": "dcb5b8b67e751154f45c672baef76a2d24f1a3be10db6ddaf77401e94c4a450f",
+      "model.pt": "24e827fc068193411124f20929c8a325874b6e83ed49c782ca1dae584e80ad25",
+      "review_policy.json": "38d328392772e17971eaffdce4429021b0dfa548f7b2f3ab5afb15854997225e",
+      "vocabulary.json": "5b138ad274c2b7780556f20cb92c4e823c3a6b564320ddbf8dbfd5a6003982e7"
+    },
+    "biomedbert": {
+      "calibrator.json": "24b6163a9c2a5f7818ba9399a79379bd71a272eb2eb880c9f91a98557dd90486",
+      "config.json": "59ff276b981bffb6e3e49232b72e042a9607e3ef1b8d0a6420b927a6d091143d",
+      "metadata.json": "8ca294790336983953ee1d001ece7a91cbd50114bd15d2217dacb68520a2b29f",
+      "model.pt": "4328e35d384f9da2ed45d893154175f314f2631852627f466ed4bb93b6779c5e",
+      "review_policy.json": "64b864ba24964af9b623b660433eed05f459f2b3290d99b5109f30a1086bf727",
+      "encoder_config/config.json": "a9e8b0f14bb13f6e0a33dc93063c81798d27233e844314978be5346f019102ac",
+      "tokenizer/tokenizer.json": "9355eae89d401cee6b1f7c9acaf4791191e3b22c918e5f616b6baea13b66e748",
+      "tokenizer/tokenizer_config.json": "e726c6ab28d8cf6367437cc244cf5aa904ddf303f34f9215cc2ef21e6546525a"
+    },
+    "pharmasentinel_final": {
+      "calibrator.json": "a2a957bd03e2631503ec1af3b5633b5a9a35018cc1e2fcca06199884883e3937",
+      "config.json": "8a3c5fb981615958af69cf7f741c55c2391c806fdbc863afc2c4e951f49819ca",
+      "metadata.json": "e4712d9868a3ebce27362e24b79172ca5d7678cf1a581ba84bf977666c394106",
+      "model.pt": "4328e35d384f9da2ed45d893154175f314f2631852627f466ed4bb93b6779c5e",
+      "review_policy.json": "6d8caeb6600fe24c9cbc21e6af8bb99dc3d0529f597f43ae2ea992e166960af8",
+      "encoder_config/config.json": "a9e8b0f14bb13f6e0a33dc93063c81798d27233e844314978be5346f019102ac",
+      "tokenizer/tokenizer.json": "9355eae89d401cee6b1f7c9acaf4791191e3b22c918e5f616b6baea13b66e748",
+      "tokenizer/tokenizer_config.json": "e726c6ab28d8cf6367437cc244cf5aa904ddf303f34f9215cc2ef21e6546525a"
+    },
+    "biomedbert_all_ce": {
+      "calibrator.json": "42f416593005a74e9d840b3651b3e4f5b665d278b35304367afa536dc6a89706",
+      "config.json": "c6e026f0afa32fd35fdfae5b92a461329fcc8809e5128233a7a2705037796389",
+      "metadata.json": "372ab8171f798f9e3d50b6563ba9fc9bbad431e8c81735ad105c89ba33343f89",
+      "model.pt": "2f30f62796fba63de3ebb262c26073a30c50c5f2a31014001a90f6fad21f8adb",
+      "review_policy.json": "1d7fe2fb336e499a95dc215b02b4dd3486941e852b626d2ff379d47bf3910767",
+      "encoder_config/config.json": "a9e8b0f14bb13f6e0a33dc93063c81798d27233e844314978be5346f019102ac",
+      "tokenizer/tokenizer.json": "9355eae89d401cee6b1f7c9acaf4791191e3b22c918e5f616b6baea13b66e748",
+      "tokenizer/tokenizer_config.json": "e726c6ab28d8cf6367437cc244cf5aa904ddf303f34f9215cc2ef21e6546525a"
+    }
+  },
+  "data_hashes": {
+    "train": "d995c525955f65008c094f15d78aa493af10ff85b00ff7de43a52f2a6c16dddd",
+    "policy": "be24da3aa8a833057b8dd2ce8af37261323f2432cc79241ee24b9dbf36195ab9",
+    "calibration": "9853d883ea96b8914b1314796db93abb3c63e00525852cfb1f5bb479bc7b56bd",
+    "model_selection": "9ded33f3c22c12020ac5d881cf9c6f18520921757b441902ca7bfdae92e2606f",
+    "test": "5a93b5a569bf54d865032141a2258b88fe853eb405af6825b56dfa6d6200e460"
+  },
+  "code_hashes": {
+    "baseline.py": "3914a8b637da53f14aa71029e8804cbee7dba50607ba2de32dd2235374abbe00",
+    "biomedical.py": "f77513b980e546bf9f605a3986ba4e0d5fd3fc2d336424aeaefb81efe6d295fc",
+    "challenge.py": "627cbc19630d4c9480ed6e5415eb1024b27fbca73cced70688fa1de502515333",
+    "cli.py": "869e1c45f0eb857ba00af74e13e5927ee782014fbfcdc64ea331d960cd9a3762",
+    "comparison.py": "9817e6cd05da1528a9b463c33e4f50aeafbac2858b30a9b6c0915d5e5c960575",
+    "data.py": "75a702451273774e197d3f689d302a5909f4a3f6266fd2295dac44823899ad0f",
+    "encoder_source.py": "1bfbb8543f754c7e583ee1c2f9070aebcb7bc0d5d57c4eda4ff06bcfb1107fd8",
+    "evaluation.py": "6c6ed9f1b65139ada0539a6a1aac2a2774da8299a98c5248839ba22796446bec",
+    "inference.py": "9207a318a72251869677f94d0f66432f4e47b5b71498d6863df5b61639526971",
+    "integrity.py": "3987fed3e683cd354f68f18a828928fd7e045e13a40ad85a8f636fd5507fbe04",
+    "io.py": "9054afd0100bf2bd593a96eda2bde355034763cc4a952aa2b6a1514f6fd23f87",
+    "labeling.py": "3a68893d63b716dc99731cb8ec7e22305be7e9652c20443982bac8139b407110",
+    "leakage.py": "5ee9a80b6829bd64e1fa6610d8dd56c66227429fe2d48c1ead465734d44e756e",
+    "protocol.py": "9744447730c53244968712b451913849d757dd4117f583dc21c78a3510c8c4fa",
+    "reliability.py": "7bae7efd7fca2a13194ba001415080e1d82470cd1e95cbebb09cb4678cdc8ceb",
+    "selection.py": "b686a4d3dadd586fda614f2467602c8affadf092fc2fa0fc52281cb4906538db",
+    "__init__.py": "108341c22066f16d7eeec4e5f1e27ad0dc601fd6876b219e9229089cf2970a24",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
+  },
+  "challenge_hashes": {
+    "challenge_dev.jsonl": "09b52d0baa49924c658ba52a63e0e4a80cefbbf55c86202115b3ef3c0698af2f",
+    "challenge_test.jsonl": "fde83228448829dd594a317063cd32810939cd27fea66d45f03d4e0fd58acafb"
+  }
+}

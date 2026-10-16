@@ -1,0 +1,2214 @@
+{
+  "split": "test",
+  "models": {
+    "baseline": {
+      "label": "BiLSTM baseline",
+      "metrics": {
+        "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+        "input_passages": 968,
+        "evaluated_passages": 967,
+        "excluded_quarantined_ids": [
+          "10870095_7"
+        ],
+        "strict_event": {
+          "precision": 0.1264559068219634,
+          "recall": 0.1506442021803766,
+          "f1": 0.13749434644957034,
+          "tp": 152,
+          "fp": 1050,
+          "fn": 857
+        },
+        "relaxed_event_iou_0.5": {
+          "precision": 0.2504159733777038,
+          "recall": 0.2983151635282458,
+          "f1": 0.2722749886928991,
+          "tp": 301,
+          "fp": 901,
+          "fn": 708
+        },
+        "evidence_segments": {
+          "trigger": {
+            "precision": 0.5232945091514143,
+            "recall": 0.6233894945490585,
+            "f1": 0.5689733152419719,
+            "tp": 629,
+            "fp": 573,
+            "fn": 380
+          },
+          "drug": {
+            "precision": 0.6930320150659134,
+            "recall": 0.602291325695581,
+            "f1": 0.6444833625218914,
+            "tp": 736,
+            "fp": 326,
+            "fn": 486
+          },
+          "effect": {
+            "precision": 0.38243366880146384,
+            "recall": 0.44,
+            "f1": 0.40920215369554575,
+            "tp": 418,
+            "fp": 675,
+            "fn": 532
+          }
+        },
+        "per_event_type": {
+          "Adverse_event": {
+            "precision": 0.13314967860422405,
+            "recall": 0.16310461192350956,
+            "f1": 0.14661274014155712,
+            "tp": 145,
+            "fp": 944,
+            "fn": 744
+          },
+          "Potential_therapeutic_event": {
+            "precision": 0.061946902654867256,
+            "recall": 0.058333333333333334,
+            "f1": 0.060085836909871244,
+            "tp": 7,
+            "fp": 106,
+            "fn": 113
+          }
+        },
+        "trigger_type_confusion": {
+          "Adverse_event": {
+            "Adverse_event": 598,
+            "missed_trigger": 286,
+            "Potential_therapeutic_event": 5
+          },
+          "spurious_trigger": {
+            "Adverse_event": 486,
+            "Potential_therapeutic_event": 77
+          },
+          "Potential_therapeutic_event": {
+            "missed_trigger": 84,
+            "Adverse_event": 5,
+            "Potential_therapeutic_event": 31
+          }
+        },
+        "missing_or_failed_outputs": 0,
+        "subgroups": {
+          "multi_event=False": {
+            "passages": 927,
+            "precision": 0.12554489973844812,
+            "recall": 0.1553398058252427,
+            "f1": 0.13886210221793635,
+            "tp": 144,
+            "fp": 1003,
+            "fn": 783
+          },
+          "multi_event=True": {
+            "passages": 40,
+            "precision": 0.14545454545454545,
+            "recall": 0.0975609756097561,
+            "f1": 0.11678832116788321,
+            "tp": 8,
+            "fp": 47,
+            "fn": 74
+          },
+          "multi_drug=False": {
+            "passages": 784,
+            "precision": 0.1504149377593361,
+            "recall": 0.17661388550548113,
+            "f1": 0.16246498599439776,
+            "tp": 145,
+            "fp": 819,
+            "fn": 676
+          },
+          "multi_drug=True": {
+            "passages": 183,
+            "precision": 0.029411764705882353,
+            "recall": 0.03723404255319149,
+            "f1": 0.03286384976525822,
+            "tp": 7,
+            "fp": 231,
+            "fn": 181
+          },
+          "discontinuous=False": {
+            "passages": 929,
+            "precision": 0.1334503950834065,
+            "recall": 0.15670103092783505,
+            "f1": 0.14414414414414414,
+            "tp": 152,
+            "fp": 987,
+            "fn": 818
+          },
+          "discontinuous=True": {
+            "passages": 38,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 63,
+            "fn": 39
+          }
+        },
+        "unmatched_prediction_error_categories": {
+          "wrong_effect": 151,
+          "spurious_or_wrong_boundary_trigger": 563,
+          "wrong_drug_and_effect": 205,
+          "wrong_drug": 121,
+          "wrong_event_type_at_correct_trigger": 10
+        },
+        "gold_triggers_with_no_predicted_overlap": 304,
+        "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+        "strict_f1_group_bootstrap_95pct": {
+          "lower": 0.11395736864726347,
+          "upper": 0.15840043824041433,
+          "replicates": 200,
+          "seed": 42,
+          "grouping": "source-ID prefix proxy"
+        },
+        "prediction_identity_validation": {
+          "validated_predictions": 968,
+          "missing_prediction_passages": 0
+        },
+        "split": "test",
+        "run_name": "baseline",
+        "predictions_sha256": "9a316ba2f8e3ba21c2f12f486a2f4009dccdfd663cf249506e4be57f633e6505",
+        "data_sha256": "5a93b5a569bf54d865032141a2258b88fe853eb405af6825b56dfa6d6200e460",
+        "final_test": true,
+        "evaluated_at_utc": "2026-10-16T04:40:37.089620+00:00"
+      },
+      "selected_review_policy": "expected_incorrect_candidates",
+      "review_at_25pct": {
+        "random": {
+          "policy": "random",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 479.34,
+          "error_capture_fraction": 0.2513581541688516,
+          "remaining_errors": 1427.66,
+          "missed_events_exposed": 215.31,
+          "remaining_missed_events": 641.69,
+          "problem_passages_found": 213.8,
+          "false_predictions_exposed": 264.03,
+          "complete_trigger_misses_exposed": 75.83,
+          "reviewed_candidates": 301.45,
+          "reviewed_characters": 32695.05,
+          "random_repetitions": 100
+        },
+        "raw": {
+          "policy": "raw",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 534,
+          "error_capture_fraction": 0.2800209753539591,
+          "remaining_errors": 1373,
+          "missed_events_exposed": 237,
+          "remaining_missed_events": 620,
+          "problem_passages_found": 239,
+          "false_predictions_exposed": 297,
+          "complete_trigger_misses_exposed": 104,
+          "reviewed_candidates": 313,
+          "reviewed_characters": 33853,
+          "lift_over_random_expectation": 1.1189267899474316,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.2653966167944628,
+            "upper": 0.2949250675212523,
+            "replicates": 300
+          }
+        },
+        "calibrated": {
+          "policy": "calibrated",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 501,
+          "error_capture_fraction": 0.2627163083377032,
+          "remaining_errors": 1406,
+          "missed_events_exposed": 243,
+          "remaining_missed_events": 614,
+          "problem_passages_found": 242,
+          "false_predictions_exposed": 258,
+          "complete_trigger_misses_exposed": 155,
+          "reviewed_candidates": 265,
+          "reviewed_characters": 34019,
+          "lift_over_random_expectation": 1.049779628770905,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.24001808713663336,
+            "upper": 0.2812678522850925,
+            "replicates": 300
+          }
+        },
+        "calibrated_checks": {
+          "policy": "calibrated_checks",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 501,
+          "error_capture_fraction": 0.2627163083377032,
+          "remaining_errors": 1406,
+          "missed_events_exposed": 243,
+          "remaining_missed_events": 614,
+          "problem_passages_found": 242,
+          "false_predictions_exposed": 258,
+          "complete_trigger_misses_exposed": 155,
+          "reviewed_candidates": 265,
+          "reviewed_characters": 34019,
+          "lift_over_random_expectation": 1.049779628770905,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.24001808713663336,
+            "upper": 0.2812678522850925,
+            "replicates": 300
+          }
+        },
+        "expected_incorrect_candidates": {
+          "policy": "expected_incorrect_candidates",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 767,
+          "error_capture_fraction": 0.4022024121657053,
+          "remaining_errors": 1140,
+          "missed_events_exposed": 241,
+          "remaining_missed_events": 616,
+          "problem_passages_found": 242,
+          "false_predictions_exposed": 526,
+          "complete_trigger_misses_exposed": 44,
+          "reviewed_candidates": 537,
+          "reviewed_characters": 37195,
+          "lift_over_random_expectation": 1.60714765522412,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.39011658122196347,
+            "upper": 0.41349941831287923,
+            "replicates": 300
+          }
+        },
+        "candidate_count": {
+          "policy": "candidate_count",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 738,
+          "error_capture_fraction": 0.3869952805453592,
+          "remaining_errors": 1169,
+          "missed_events_exposed": 228,
+          "remaining_missed_events": 629,
+          "problem_passages_found": 242,
+          "false_predictions_exposed": 510,
+          "complete_trigger_misses_exposed": 38,
+          "reviewed_candidates": 537,
+          "reviewed_characters": 37027,
+          "lift_over_random_expectation": 1.5463819681295965,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.3727710873487533,
+            "upper": 0.40060651257236823,
+            "replicates": 300
+          }
+        },
+        "passage_length": {
+          "policy": "passage_length",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 577,
+          "error_capture_fraction": 0.3025694808599895,
+          "remaining_errors": 1330,
+          "missed_events_exposed": 248,
+          "remaining_missed_events": 609,
+          "problem_passages_found": 234,
+          "false_predictions_exposed": 329,
+          "complete_trigger_misses_exposed": 107,
+          "reviewed_candidates": 345,
+          "reviewed_characters": 53042,
+          "lift_over_random_expectation": 1.2090276363289665,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.2877627326502832,
+            "upper": 0.3178009202109752,
+            "replicates": 300
+          }
+        }
+      },
+      "reliability": {
+        "candidates": 1202,
+        "correct_candidates": 152,
+        "brier_raw": 0.1778899666603517,
+        "brier_calibrated": 0.07680530353951472,
+        "brier_calibration_prevalence_constant": 0.11054370817514554,
+        "brier_skill_vs_calibration_constant": 0.3052042055815214,
+        "bins": [
+          {
+            "score": "raw",
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 646,
+            "mean_confidence": 0.0,
+            "observed_correctness": 0.010835913312693499
+          },
+          {
+            "score": "raw",
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 3,
+            "mean_confidence": 0.38126681248346966,
+            "observed_correctness": 0.0
+          },
+          {
+            "score": "raw",
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 139,
+            "mean_confidence": 0.5302068200185717,
+            "observed_correctness": 0.04316546762589928
+          },
+          {
+            "score": "raw",
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 205,
+            "mean_confidence": 0.6937165951098853,
+            "observed_correctness": 0.15609756097560976
+          },
+          {
+            "score": "raw",
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 209,
+            "mean_confidence": 0.9176836184492937,
+            "observed_correctness": 0.5119617224880383
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 857,
+            "mean_confidence": 0.04963404784341686,
+            "observed_correctness": 0.01866977829638273
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 260,
+            "mean_confidence": 0.29017696276317667,
+            "observed_correctness": 0.28076923076923077
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 85,
+            "mean_confidence": 0.4294876872206732,
+            "observed_correctness": 0.7411764705882353
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 0,
+            "mean_confidence": null,
+            "observed_correctness": null
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 0,
+            "mean_confidence": null,
+            "observed_correctness": null
+          }
+        ],
+        "limitation": "Candidate calibration excludes missed events; review evaluation includes all gold events."
+      },
+      "challenge": {
+        "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+        "input_passages": 10,
+        "evaluated_passages": 10,
+        "excluded_quarantined_ids": [],
+        "strict_event": {
+          "precision": 0.14285714285714285,
+          "recall": 0.14285714285714285,
+          "f1": 0.14285714285714285,
+          "tp": 1,
+          "fp": 6,
+          "fn": 6
+        },
+        "relaxed_event_iou_0.5": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5714285714285714,
+          "f1": 0.5714285714285714,
+          "tp": 4,
+          "fp": 3,
+          "fn": 3
+        },
+        "evidence_segments": {
+          "trigger": {
+            "precision": 0.7142857142857143,
+            "recall": 0.7142857142857143,
+            "f1": 0.7142857142857143,
+            "tp": 5,
+            "fp": 2,
+            "fn": 2
+          },
+          "drug": {
+            "precision": 0.16666666666666666,
+            "recall": 0.16666666666666666,
+            "f1": 0.16666666666666666,
+            "tp": 1,
+            "fp": 5,
+            "fn": 5
+          },
+          "effect": {
+            "precision": 0.4666666666666667,
+            "recall": 0.875,
+            "f1": 0.6086956521739131,
+            "tp": 7,
+            "fp": 8,
+            "fn": 1
+          }
+        },
+        "per_event_type": {
+          "Adverse_event": {
+            "precision": 0.16666666666666666,
+            "recall": 0.2,
+            "f1": 0.18181818181818182,
+            "tp": 1,
+            "fp": 5,
+            "fn": 4
+          },
+          "Potential_therapeutic_event": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 2
+          }
+        },
+        "trigger_type_confusion": {
+          "Adverse_event": {
+            "Adverse_event": 5
+          },
+          "Potential_therapeutic_event": {
+            "missed_trigger": 2
+          },
+          "spurious_trigger": {
+            "Potential_therapeutic_event": 1,
+            "Adverse_event": 1
+          }
+        },
+        "missing_or_failed_outputs": 0,
+        "subgroups": {
+          "multi_event=False": {
+            "passages": 9,
+            "precision": 0.16666666666666666,
+            "recall": 0.2,
+            "f1": 0.18181818181818182,
+            "tp": 1,
+            "fp": 5,
+            "fn": 4
+          },
+          "multi_event=True": {
+            "passages": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 2
+          },
+          "multi_drug=False": {
+            "passages": 10,
+            "precision": 0.14285714285714285,
+            "recall": 0.14285714285714285,
+            "f1": 0.14285714285714285,
+            "tp": 1,
+            "fp": 6,
+            "fn": 6
+          },
+          "multi_drug=True": {
+            "passages": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "discontinuous=False": {
+            "passages": 9,
+            "precision": 0.16666666666666666,
+            "recall": 0.16666666666666666,
+            "f1": 0.16666666666666666,
+            "tp": 1,
+            "fp": 5,
+            "fn": 5
+          },
+          "discontinuous=True": {
+            "passages": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          }
+        },
+        "unmatched_prediction_error_categories": {
+          "spurious_or_wrong_boundary_trigger": 2,
+          "wrong_drug_and_effect": 3,
+          "wrong_effect": 1
+        },
+        "gold_triggers_with_no_predicted_overlap": 2,
+        "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+        "dataset": "challenge_test",
+        "annotation": "Self-authored synthetic text, a deliberately small diagnostic suite. Not clinical or external validation.",
+        "run_name": "baseline",
+        "no_event_passages": 4,
+        "no_event_passages_with_spurious_output": 1
+      }
+    },
+    "biomedbert": {
+      "label": "Original BiomedBERT",
+      "metrics": {
+        "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+        "input_passages": 968,
+        "evaluated_passages": 967,
+        "excluded_quarantined_ids": [
+          "10870095_7"
+        ],
+        "strict_event": {
+          "precision": 0.2348777348777349,
+          "recall": 0.36174430128840435,
+          "f1": 0.28482247366367536,
+          "tp": 365,
+          "fp": 1189,
+          "fn": 644
+        },
+        "relaxed_event_iou_0.5": {
+          "precision": 0.44144144144144143,
+          "recall": 0.6798810703666998,
+          "f1": 0.5353101833788529,
+          "tp": 686,
+          "fp": 868,
+          "fn": 323
+        },
+        "evidence_segments": {
+          "trigger": {
+            "precision": 0.48584298584298585,
+            "recall": 0.7482656095143707,
+            "f1": 0.5891533359344518,
+            "tp": 755,
+            "fp": 799,
+            "fn": 254
+          },
+          "drug": {
+            "precision": 0.5141007859454462,
+            "recall": 0.9099836333878887,
+            "f1": 0.6570162481536189,
+            "tp": 1112,
+            "fp": 1051,
+            "fn": 110
+          },
+          "effect": {
+            "precision": 0.3362658846529814,
+            "recall": 0.7242105263157895,
+            "f1": 0.45927903871829107,
+            "tp": 688,
+            "fp": 1358,
+            "fn": 262
+          }
+        },
+        "per_event_type": {
+          "Adverse_event": {
+            "precision": 0.26037735849056604,
+            "recall": 0.3880764904386952,
+            "f1": 0.3116531165311653,
+            "tp": 345,
+            "fp": 980,
+            "fn": 544
+          },
+          "Potential_therapeutic_event": {
+            "precision": 0.08733624454148471,
+            "recall": 0.16666666666666666,
+            "f1": 0.11461318051575932,
+            "tp": 20,
+            "fp": 209,
+            "fn": 100
+          }
+        },
+        "trigger_type_confusion": {
+          "Adverse_event": {
+            "Adverse_event": 674,
+            "missed_trigger": 204,
+            "Potential_therapeutic_event": 11
+          },
+          "spurious_trigger": {
+            "Adverse_event": 643,
+            "Potential_therapeutic_event": 137
+          },
+          "Potential_therapeutic_event": {
+            "missed_trigger": 31,
+            "Potential_therapeutic_event": 81,
+            "Adverse_event": 8
+          }
+        },
+        "missing_or_failed_outputs": 0,
+        "subgroups": {
+          "multi_event=False": {
+            "passages": 927,
+            "precision": 0.24709103353867215,
+            "recall": 0.389428263214671,
+            "f1": 0.30234505862646566,
+            "tp": 361,
+            "fp": 1100,
+            "fn": 566
+          },
+          "multi_event=True": {
+            "passages": 40,
+            "precision": 0.043010752688172046,
+            "recall": 0.04878048780487805,
+            "f1": 0.045714285714285714,
+            "tp": 4,
+            "fp": 89,
+            "fn": 78
+          },
+          "multi_drug=False": {
+            "passages": 784,
+            "precision": 0.2625607779578606,
+            "recall": 0.3946406820950061,
+            "f1": 0.31532846715328466,
+            "tp": 324,
+            "fp": 910,
+            "fn": 497
+          },
+          "multi_drug=True": {
+            "passages": 183,
+            "precision": 0.128125,
+            "recall": 0.21808510638297873,
+            "f1": 0.16141732283464566,
+            "tp": 41,
+            "fp": 279,
+            "fn": 147
+          },
+          "discontinuous=False": {
+            "passages": 929,
+            "precision": 0.2430976430976431,
+            "recall": 0.37216494845360826,
+            "f1": 0.2940936863543788,
+            "tp": 361,
+            "fp": 1124,
+            "fn": 609
+          },
+          "discontinuous=True": {
+            "passages": 38,
+            "precision": 0.057971014492753624,
+            "recall": 0.10256410256410256,
+            "f1": 0.07407407407407407,
+            "tp": 4,
+            "fp": 65,
+            "fn": 35
+          }
+        },
+        "unmatched_prediction_error_categories": {
+          "wrong_effect": 220,
+          "spurious_or_wrong_boundary_trigger": 780,
+          "wrong_drug": 91,
+          "wrong_event_type_at_correct_trigger": 19,
+          "wrong_drug_and_effect": 79
+        },
+        "gold_triggers_with_no_predicted_overlap": 108,
+        "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+        "strict_f1_group_bootstrap_95pct": {
+          "lower": 0.25587544019309144,
+          "upper": 0.31128420358980796,
+          "replicates": 200,
+          "seed": 42,
+          "grouping": "source-ID prefix proxy"
+        },
+        "prediction_identity_validation": {
+          "validated_predictions": 968,
+          "missing_prediction_passages": 0
+        },
+        "split": "test",
+        "run_name": "biomedbert",
+        "predictions_sha256": "2b95d4d0f5e1d249e3fa3e0f011627c6968d58949cae0457a6810a56d76fa03f",
+        "data_sha256": "5a93b5a569bf54d865032141a2258b88fe853eb405af6825b56dfa6d6200e460",
+        "final_test": true,
+        "evaluated_at_utc": "2026-10-16T04:43:38.307244+00:00"
+      },
+      "selected_review_policy": "expected_incorrect_candidates",
+      "review_at_25pct": {
+        "random": {
+          "policy": "random",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 458.47,
+          "error_capture_fraction": 0.2501200218221495,
+          "remaining_errors": 1374.53,
+          "missed_events_exposed": 161.34,
+          "remaining_missed_events": 482.66,
+          "problem_passages_found": 186.38,
+          "false_predictions_exposed": 297.13,
+          "complete_trigger_misses_exposed": 26.41,
+          "reviewed_candidates": 388.52,
+          "reviewed_characters": 32695.05,
+          "random_repetitions": 100
+        },
+        "raw": {
+          "policy": "raw",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 655,
+          "error_capture_fraction": 0.35733769776322966,
+          "remaining_errors": 1178,
+          "missed_events_exposed": 202,
+          "remaining_missed_events": 442,
+          "problem_passages_found": 232,
+          "false_predictions_exposed": 453,
+          "complete_trigger_misses_exposed": 41,
+          "reviewed_candidates": 507,
+          "reviewed_characters": 38932,
+          "lift_over_random_expectation": 1.4278741889960458,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.3375728042781026,
+            "upper": 0.38075563457895695,
+            "replicates": 300
+          }
+        },
+        "calibrated": {
+          "policy": "calibrated",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 664,
+          "error_capture_fraction": 0.36224768139661756,
+          "remaining_errors": 1169,
+          "missed_events_exposed": 204,
+          "remaining_missed_events": 440,
+          "problem_passages_found": 233,
+          "false_predictions_exposed": 460,
+          "complete_trigger_misses_exposed": 44,
+          "reviewed_candidates": 513,
+          "reviewed_characters": 38082,
+          "lift_over_random_expectation": 1.4474938343410297,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.343081331584267,
+            "upper": 0.3843357673541879,
+            "replicates": 300
+          }
+        },
+        "calibrated_checks": {
+          "policy": "calibrated_checks",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 664,
+          "error_capture_fraction": 0.36224768139661756,
+          "remaining_errors": 1169,
+          "missed_events_exposed": 204,
+          "remaining_missed_events": 440,
+          "problem_passages_found": 233,
+          "false_predictions_exposed": 460,
+          "complete_trigger_misses_exposed": 44,
+          "reviewed_candidates": 513,
+          "reviewed_characters": 38082,
+          "lift_over_random_expectation": 1.4474938343410297,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.343081331584267,
+            "upper": 0.3843357673541879,
+            "replicates": 300
+          }
+        },
+        "expected_incorrect_candidates": {
+          "policy": "expected_incorrect_candidates",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 786,
+          "error_capture_fraction": 0.4288052373158756,
+          "remaining_errors": 1047,
+          "missed_events_exposed": 220,
+          "remaining_missed_events": 424,
+          "problem_passages_found": 242,
+          "false_predictions_exposed": 566,
+          "complete_trigger_misses_exposed": 30,
+          "reviewed_candidates": 612,
+          "reviewed_characters": 38828,
+          "lift_over_random_expectation": 1.713449026795255,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.4086996688402391,
+            "upper": 0.4463397183493178,
+            "replicates": 300
+          }
+        },
+        "candidate_count": {
+          "policy": "candidate_count",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 734,
+          "error_capture_fraction": 0.4004364429896345,
+          "remaining_errors": 1099,
+          "missed_events_exposed": 194,
+          "remaining_missed_events": 450,
+          "problem_passages_found": 242,
+          "false_predictions_exposed": 540,
+          "complete_trigger_misses_exposed": 24,
+          "reviewed_candidates": 612,
+          "reviewed_characters": 37425,
+          "lift_over_random_expectation": 1.6000910759131262,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.38309555277684293,
+            "upper": 0.42027148897314004,
+            "replicates": 300
+          }
+        },
+        "passage_length": {
+          "policy": "passage_length",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 611,
+          "error_capture_fraction": 0.3333333333333333,
+          "remaining_errors": 1222,
+          "missed_events_exposed": 213,
+          "remaining_missed_events": 431,
+          "problem_passages_found": 227,
+          "false_predictions_exposed": 398,
+          "complete_trigger_misses_exposed": 47,
+          "reviewed_candidates": 449,
+          "reviewed_characters": 53042,
+          "lift_over_random_expectation": 1.3319559228650137,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.311248366432618,
+            "upper": 0.35178380276447807,
+            "replicates": 300
+          }
+        }
+      },
+      "reliability": {
+        "candidates": 1554,
+        "correct_candidates": 365,
+        "brier_raw": 0.4200218589621596,
+        "brier_calibrated": 0.13794607787800992,
+        "brier_calibration_prevalence_constant": 0.18030985938285227,
+        "brier_skill_vs_calibration_constant": 0.2349498893174291,
+        "bins": [
+          {
+            "score": "raw",
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 102,
+            "mean_confidence": 0.0,
+            "observed_correctness": 0.19607843137254902
+          },
+          {
+            "score": "raw",
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 7,
+            "mean_confidence": 0.37118028317178997,
+            "observed_correctness": 0.14285714285714285
+          },
+          {
+            "score": "raw",
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 292,
+            "mean_confidence": 0.5343005360074375,
+            "observed_correctness": 0.02054794520547945
+          },
+          {
+            "score": "raw",
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 407,
+            "mean_confidence": 0.704271576311557,
+            "observed_correctness": 0.07862407862407862
+          },
+          {
+            "score": "raw",
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 746,
+            "mean_confidence": 0.9268058919879222,
+            "observed_correctness": 0.4101876675603217
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 702,
+            "mean_confidence": 0.09185148737857082,
+            "observed_correctness": 0.06837606837606838
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 420,
+            "mean_confidence": 0.2967602901549765,
+            "observed_correctness": 0.1261904761904762
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 432,
+            "mean_confidence": 0.4570446091166855,
+            "observed_correctness": 0.6111111111111112
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 0,
+            "mean_confidence": null,
+            "observed_correctness": null
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 0,
+            "mean_confidence": null,
+            "observed_correctness": null
+          }
+        ],
+        "limitation": "Candidate calibration excludes missed events; review evaluation includes all gold events."
+      },
+      "challenge": {
+        "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+        "input_passages": 10,
+        "evaluated_passages": 10,
+        "excluded_quarantined_ids": [],
+        "strict_event": {
+          "precision": 0.2,
+          "recall": 0.2857142857142857,
+          "f1": 0.23529411764705882,
+          "tp": 2,
+          "fp": 8,
+          "fn": 5
+        },
+        "relaxed_event_iou_0.5": {
+          "precision": 0.4,
+          "recall": 0.5714285714285714,
+          "f1": 0.47058823529411764,
+          "tp": 4,
+          "fp": 6,
+          "fn": 3
+        },
+        "evidence_segments": {
+          "trigger": {
+            "precision": 0.7,
+            "recall": 1.0,
+            "f1": 0.8235294117647058,
+            "tp": 7,
+            "fp": 3,
+            "fn": 0
+          },
+          "drug": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "f1": 0.5714285714285714,
+            "tp": 4,
+            "fp": 4,
+            "fn": 2
+          },
+          "effect": {
+            "precision": 0.35294117647058826,
+            "recall": 0.75,
+            "f1": 0.48,
+            "tp": 6,
+            "fp": 11,
+            "fn": 2
+          }
+        },
+        "per_event_type": {
+          "Adverse_event": {
+            "precision": 0.125,
+            "recall": 0.2,
+            "f1": 0.15384615384615385,
+            "tp": 1,
+            "fp": 7,
+            "fn": 4
+          },
+          "Potential_therapeutic_event": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5,
+            "tp": 1,
+            "fp": 1,
+            "fn": 1
+          }
+        },
+        "trigger_type_confusion": {
+          "Adverse_event": {
+            "Adverse_event": 5
+          },
+          "Potential_therapeutic_event": {
+            "Potential_therapeutic_event": 2
+          },
+          "spurious_trigger": {
+            "Adverse_event": 3
+          }
+        },
+        "missing_or_failed_outputs": 0,
+        "subgroups": {
+          "multi_event=False": {
+            "passages": 9,
+            "precision": 0.25,
+            "recall": 0.4,
+            "f1": 0.3076923076923077,
+            "tp": 2,
+            "fp": 6,
+            "fn": 3
+          },
+          "multi_event=True": {
+            "passages": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 2,
+            "fn": 2
+          },
+          "multi_drug=False": {
+            "passages": 10,
+            "precision": 0.2,
+            "recall": 0.2857142857142857,
+            "f1": 0.23529411764705882,
+            "tp": 2,
+            "fp": 8,
+            "fn": 5
+          },
+          "multi_drug=True": {
+            "passages": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "discontinuous=False": {
+            "passages": 9,
+            "precision": 0.2222222222222222,
+            "recall": 0.3333333333333333,
+            "f1": 0.26666666666666666,
+            "tp": 2,
+            "fp": 7,
+            "fn": 4
+          },
+          "discontinuous=True": {
+            "passages": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          }
+        },
+        "unmatched_prediction_error_categories": {
+          "spurious_or_wrong_boundary_trigger": 3,
+          "wrong_effect": 3,
+          "wrong_drug_and_effect": 2
+        },
+        "gold_triggers_with_no_predicted_overlap": 0,
+        "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+        "dataset": "challenge_test",
+        "annotation": "Self-authored synthetic text, a deliberately small diagnostic suite. Not clinical or external validation.",
+        "run_name": "biomedbert",
+        "no_event_passages": 4,
+        "no_event_passages_with_spurious_output": 2
+      }
+    },
+    "pharmasentinel_final": {
+      "label": "Conservative mode",
+      "metrics": {
+        "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+        "input_passages": 968,
+        "evaluated_passages": 967,
+        "excluded_quarantined_ids": [
+          "10870095_7"
+        ],
+        "strict_event": {
+          "precision": 0.23768877216021012,
+          "recall": 0.3587710604558969,
+          "f1": 0.2859399684044234,
+          "tp": 362,
+          "fp": 1161,
+          "fn": 647
+        },
+        "relaxed_event_iou_0.5": {
+          "precision": 0.4458305975049245,
+          "recall": 0.6729435084241824,
+          "f1": 0.5363349131121643,
+          "tp": 679,
+          "fp": 844,
+          "fn": 330
+        },
+        "evidence_segments": {
+          "trigger": {
+            "precision": 0.4917925147734734,
+            "recall": 0.7423191278493558,
+            "f1": 0.5916271721958926,
+            "tp": 749,
+            "fp": 774,
+            "fn": 260
+          },
+          "drug": {
+            "precision": 0.5255924170616114,
+            "recall": 0.9075286415711947,
+            "f1": 0.6656662665066027,
+            "tp": 1109,
+            "fp": 1001,
+            "fn": 113
+          },
+          "effect": {
+            "precision": 0.3423019431988042,
+            "recall": 0.7231578947368421,
+            "f1": 0.4646601285086236,
+            "tp": 687,
+            "fp": 1320,
+            "fn": 263
+          }
+        },
+        "per_event_type": {
+          "Adverse_event": {
+            "precision": 0.2624712202609363,
+            "recall": 0.3847019122609674,
+            "f1": 0.31204379562043794,
+            "tp": 342,
+            "fp": 961,
+            "fn": 547
+          },
+          "Potential_therapeutic_event": {
+            "precision": 0.09090909090909091,
+            "recall": 0.16666666666666666,
+            "f1": 0.11764705882352941,
+            "tp": 20,
+            "fp": 200,
+            "fn": 100
+          }
+        },
+        "trigger_type_confusion": {
+          "Adverse_event": {
+            "Adverse_event": 668,
+            "missed_trigger": 210,
+            "Potential_therapeutic_event": 11
+          },
+          "spurious_trigger": {
+            "Adverse_event": 627,
+            "Potential_therapeutic_event": 128
+          },
+          "Potential_therapeutic_event": {
+            "missed_trigger": 31,
+            "Potential_therapeutic_event": 81,
+            "Adverse_event": 8
+          }
+        },
+        "missing_or_failed_outputs": 0,
+        "subgroups": {
+          "multi_event=False": {
+            "passages": 927,
+            "precision": 0.2501747030048917,
+            "recall": 0.3861920172599784,
+            "f1": 0.30364715860899066,
+            "tp": 358,
+            "fp": 1073,
+            "fn": 569
+          },
+          "multi_event=True": {
+            "passages": 40,
+            "precision": 0.043478260869565216,
+            "recall": 0.04878048780487805,
+            "f1": 0.04597701149425287,
+            "tp": 4,
+            "fp": 88,
+            "fn": 78
+          },
+          "multi_drug=False": {
+            "passages": 784,
+            "precision": 0.26398026315789475,
+            "recall": 0.3909866017052375,
+            "f1": 0.31516936671575846,
+            "tp": 321,
+            "fp": 895,
+            "fn": 500
+          },
+          "multi_drug=True": {
+            "passages": 183,
+            "precision": 0.13355048859934854,
+            "recall": 0.21808510638297873,
+            "f1": 0.16565656565656567,
+            "tp": 41,
+            "fp": 266,
+            "fn": 147
+          },
+          "discontinuous=False": {
+            "passages": 929,
+            "precision": 0.24621733149931224,
+            "recall": 0.36907216494845363,
+            "f1": 0.2953795379537954,
+            "tp": 358,
+            "fp": 1096,
+            "fn": 612
+          },
+          "discontinuous=True": {
+            "passages": 38,
+            "precision": 0.057971014492753624,
+            "recall": 0.10256410256410256,
+            "f1": 0.07407407407407407,
+            "tp": 4,
+            "fp": 65,
+            "fn": 35
+          }
+        },
+        "unmatched_prediction_error_categories": {
+          "wrong_effect": 218,
+          "spurious_or_wrong_boundary_trigger": 755,
+          "wrong_drug": 90,
+          "wrong_event_type_at_correct_trigger": 19,
+          "wrong_drug_and_effect": 79
+        },
+        "gold_triggers_with_no_predicted_overlap": 116,
+        "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+        "strict_f1_group_bootstrap_95pct": {
+          "lower": 0.2573407168614529,
+          "upper": 0.3113249504950495,
+          "replicates": 200,
+          "seed": 42,
+          "grouping": "source-ID prefix proxy"
+        },
+        "prediction_identity_validation": {
+          "validated_predictions": 968,
+          "missing_prediction_passages": 0
+        },
+        "split": "test",
+        "run_name": "pharmasentinel_final",
+        "predictions_sha256": "813370e01202a460f91355e2fb36dd31764a00b86ec7a0fe27b1a02f2d25556c",
+        "data_sha256": "5a93b5a569bf54d865032141a2258b88fe853eb405af6825b56dfa6d6200e460",
+        "final_test": true,
+        "evaluated_at_utc": "2026-10-16T04:46:29.956592+00:00"
+      },
+      "selected_review_policy": "expected_incorrect_candidates",
+      "review_at_25pct": {
+        "random": {
+          "policy": "random",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 451.99,
+          "error_capture_fraction": 0.24999446902654865,
+          "remaining_errors": 1356.01,
+          "missed_events_exposed": 162.12,
+          "remaining_missed_events": 484.88,
+          "problem_passages_found": 185.31,
+          "false_predictions_exposed": 289.87,
+          "complete_trigger_misses_exposed": 28.51,
+          "reviewed_candidates": 380.48,
+          "reviewed_characters": 32695.05,
+          "random_repetitions": 100
+        },
+        "raw": {
+          "policy": "raw",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 653,
+          "error_capture_fraction": 0.36117256637168144,
+          "remaining_errors": 1155,
+          "missed_events_exposed": 210,
+          "remaining_missed_events": 437,
+          "problem_passages_found": 232,
+          "false_predictions_exposed": 443,
+          "complete_trigger_misses_exposed": 43,
+          "reviewed_candidates": 492,
+          "reviewed_characters": 38373,
+          "lift_over_random_expectation": 1.4431978168653552,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.3364440915102331,
+            "upper": 0.381119730494666,
+            "replicates": 300
+          }
+        },
+        "calibrated": {
+          "policy": "calibrated",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 662,
+          "error_capture_fraction": 0.3661504424778761,
+          "remaining_errors": 1146,
+          "missed_events_exposed": 207,
+          "remaining_missed_events": 440,
+          "problem_passages_found": 232,
+          "false_predictions_exposed": 455,
+          "complete_trigger_misses_exposed": 47,
+          "reviewed_candidates": 505,
+          "reviewed_characters": 38224,
+          "lift_over_random_expectation": 1.4630887515541577,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.34208396691297444,
+            "upper": 0.38749588153805836,
+            "replicates": 300
+          }
+        },
+        "calibrated_checks": {
+          "policy": "calibrated_checks",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 662,
+          "error_capture_fraction": 0.3661504424778761,
+          "remaining_errors": 1146,
+          "missed_events_exposed": 207,
+          "remaining_missed_events": 440,
+          "problem_passages_found": 232,
+          "false_predictions_exposed": 455,
+          "complete_trigger_misses_exposed": 47,
+          "reviewed_candidates": 505,
+          "reviewed_characters": 38224,
+          "lift_over_random_expectation": 1.4630887515541577,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.34208396691297444,
+            "upper": 0.38749588153805836,
+            "replicates": 300
+          }
+        },
+        "expected_incorrect_candidates": {
+          "policy": "expected_incorrect_candidates",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 782,
+          "error_capture_fraction": 0.4325221238938053,
+          "remaining_errors": 1026,
+          "missed_events_exposed": 225,
+          "remaining_missed_events": 422,
+          "problem_passages_found": 242,
+          "false_predictions_exposed": 557,
+          "complete_trigger_misses_exposed": 31,
+          "reviewed_candidates": 600,
+          "reviewed_characters": 38779,
+          "lift_over_random_expectation": 1.7283012140715277,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.4086173040150206,
+            "upper": 0.44868723429142543,
+            "replicates": 300
+          }
+        },
+        "candidate_count": {
+          "policy": "candidate_count",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 734,
+          "error_capture_fraction": 0.4059734513274336,
+          "remaining_errors": 1074,
+          "missed_events_exposed": 200,
+          "remaining_missed_events": 447,
+          "problem_passages_found": 242,
+          "false_predictions_exposed": 534,
+          "complete_trigger_misses_exposed": 27,
+          "reviewed_candidates": 600,
+          "reviewed_characters": 38019,
+          "lift_over_random_expectation": 1.6222162290645799,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.3865522036448298,
+            "upper": 0.423140803334473,
+            "replicates": 300
+          }
+        },
+        "passage_length": {
+          "policy": "passage_length",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 597,
+          "error_capture_fraction": 0.3301991150442478,
+          "remaining_errors": 1211,
+          "missed_events_exposed": 214,
+          "remaining_missed_events": 433,
+          "problem_passages_found": 226,
+          "false_predictions_exposed": 383,
+          "complete_trigger_misses_exposed": 52,
+          "reviewed_candidates": 433,
+          "reviewed_characters": 53042,
+          "lift_over_random_expectation": 1.3194320010239158,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.3094954580233218,
+            "upper": 0.3487213945380593,
+            "replicates": 300
+          }
+        }
+      },
+      "reliability": {
+        "candidates": 1523,
+        "correct_candidates": 362,
+        "brier_raw": 0.4245780652521312,
+        "brier_calibrated": 0.13916257902707313,
+        "brier_calibration_prevalence_constant": 0.1818414959540054,
+        "brier_skill_vs_calibration_constant": 0.23470394753971546,
+        "bins": [
+          {
+            "score": "raw",
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 99,
+            "mean_confidence": 0.0,
+            "observed_correctness": 0.20202020202020202
+          },
+          {
+            "score": "raw",
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 2,
+            "mean_confidence": 0.36922310292720795,
+            "observed_correctness": 0.0
+          },
+          {
+            "score": "raw",
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 269,
+            "mean_confidence": 0.5395700773545061,
+            "observed_correctness": 0.01486988847583643
+          },
+          {
+            "score": "raw",
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 407,
+            "mean_confidence": 0.704271576311557,
+            "observed_correctness": 0.07862407862407862
+          },
+          {
+            "score": "raw",
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 746,
+            "mean_confidence": 0.9268058919879222,
+            "observed_correctness": 0.4101876675603217
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 667,
+            "mean_confidence": 0.09521711750276003,
+            "observed_correctness": 0.06746626686656672
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 423,
+            "mean_confidence": 0.29660834385431467,
+            "observed_correctness": 0.12529550827423167
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 433,
+            "mean_confidence": 0.4563236101502488,
+            "observed_correctness": 0.6096997690531177
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 0,
+            "mean_confidence": null,
+            "observed_correctness": null
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 0,
+            "mean_confidence": null,
+            "observed_correctness": null
+          }
+        ],
+        "limitation": "Candidate calibration excludes missed events; review evaluation includes all gold events."
+      },
+      "challenge": {
+        "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+        "input_passages": 10,
+        "evaluated_passages": 10,
+        "excluded_quarantined_ids": [],
+        "strict_event": {
+          "precision": 0.2,
+          "recall": 0.2857142857142857,
+          "f1": 0.23529411764705882,
+          "tp": 2,
+          "fp": 8,
+          "fn": 5
+        },
+        "relaxed_event_iou_0.5": {
+          "precision": 0.4,
+          "recall": 0.5714285714285714,
+          "f1": 0.47058823529411764,
+          "tp": 4,
+          "fp": 6,
+          "fn": 3
+        },
+        "evidence_segments": {
+          "trigger": {
+            "precision": 0.7,
+            "recall": 1.0,
+            "f1": 0.8235294117647058,
+            "tp": 7,
+            "fp": 3,
+            "fn": 0
+          },
+          "drug": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "f1": 0.5714285714285714,
+            "tp": 4,
+            "fp": 4,
+            "fn": 2
+          },
+          "effect": {
+            "precision": 0.35294117647058826,
+            "recall": 0.75,
+            "f1": 0.48,
+            "tp": 6,
+            "fp": 11,
+            "fn": 2
+          }
+        },
+        "per_event_type": {
+          "Adverse_event": {
+            "precision": 0.125,
+            "recall": 0.2,
+            "f1": 0.15384615384615385,
+            "tp": 1,
+            "fp": 7,
+            "fn": 4
+          },
+          "Potential_therapeutic_event": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5,
+            "tp": 1,
+            "fp": 1,
+            "fn": 1
+          }
+        },
+        "trigger_type_confusion": {
+          "Adverse_event": {
+            "Adverse_event": 5
+          },
+          "Potential_therapeutic_event": {
+            "Potential_therapeutic_event": 2
+          },
+          "spurious_trigger": {
+            "Adverse_event": 3
+          }
+        },
+        "missing_or_failed_outputs": 0,
+        "subgroups": {
+          "multi_event=False": {
+            "passages": 9,
+            "precision": 0.25,
+            "recall": 0.4,
+            "f1": 0.3076923076923077,
+            "tp": 2,
+            "fp": 6,
+            "fn": 3
+          },
+          "multi_event=True": {
+            "passages": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 2,
+            "fn": 2
+          },
+          "multi_drug=False": {
+            "passages": 10,
+            "precision": 0.2,
+            "recall": 0.2857142857142857,
+            "f1": 0.23529411764705882,
+            "tp": 2,
+            "fp": 8,
+            "fn": 5
+          },
+          "multi_drug=True": {
+            "passages": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "discontinuous=False": {
+            "passages": 9,
+            "precision": 0.2222222222222222,
+            "recall": 0.3333333333333333,
+            "f1": 0.26666666666666666,
+            "tp": 2,
+            "fp": 7,
+            "fn": 4
+          },
+          "discontinuous=True": {
+            "passages": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          }
+        },
+        "unmatched_prediction_error_categories": {
+          "spurious_or_wrong_boundary_trigger": 3,
+          "wrong_effect": 3,
+          "wrong_drug_and_effect": 2
+        },
+        "gold_triggers_with_no_predicted_overlap": 0,
+        "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+        "dataset": "challenge_test",
+        "annotation": "Self-authored synthetic text, a deliberately small diagnostic suite. Not clinical or external validation.",
+        "run_name": "pharmasentinel_final",
+        "no_event_passages": 4,
+        "no_event_passages_with_spurious_output": 2
+      }
+    },
+    "biomedbert_all_ce": {
+      "label": "Precision-oriented mode",
+      "metrics": {
+        "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+        "input_passages": 968,
+        "evaluated_passages": 967,
+        "excluded_quarantined_ids": [
+          "10870095_7"
+        ],
+        "strict_event": {
+          "precision": 0.44421699078812693,
+          "recall": 0.4301288404360753,
+          "f1": 0.43705941591137965,
+          "tp": 434,
+          "fp": 543,
+          "fn": 575
+        },
+        "relaxed_event_iou_0.5": {
+          "precision": 0.6274309109518935,
+          "recall": 0.6075322101090188,
+          "f1": 0.6173212487411883,
+          "tp": 613,
+          "fp": 364,
+          "fn": 396
+        },
+        "evidence_segments": {
+          "trigger": {
+            "precision": 0.714431934493347,
+            "recall": 0.6917740336967294,
+            "f1": 0.702920443101712,
+            "tp": 698,
+            "fp": 279,
+            "fn": 311
+          },
+          "drug": {
+            "precision": 0.8318425760286225,
+            "recall": 0.7610474631751227,
+            "f1": 0.7948717948717948,
+            "tp": 930,
+            "fp": 188,
+            "fn": 292
+          },
+          "effect": {
+            "precision": 0.6022727272727273,
+            "recall": 0.6694736842105263,
+            "f1": 0.634097706879362,
+            "tp": 636,
+            "fp": 420,
+            "fn": 314
+          }
+        },
+        "per_event_type": {
+          "Adverse_event": {
+            "precision": 0.45274725274725275,
+            "recall": 0.4634420697412823,
+            "f1": 0.45803224013340743,
+            "tp": 412,
+            "fp": 498,
+            "fn": 477
+          },
+          "Potential_therapeutic_event": {
+            "precision": 0.3283582089552239,
+            "recall": 0.18333333333333332,
+            "f1": 0.23529411764705882,
+            "tp": 22,
+            "fp": 45,
+            "fn": 98
+          }
+        },
+        "trigger_type_confusion": {
+          "Adverse_event": {
+            "missed_trigger": 237,
+            "Adverse_event": 651,
+            "Potential_therapeutic_event": 1
+          },
+          "spurious_trigger": {
+            "Adverse_event": 255,
+            "Potential_therapeutic_event": 19
+          },
+          "Potential_therapeutic_event": {
+            "missed_trigger": 69,
+            "Potential_therapeutic_event": 47,
+            "Adverse_event": 4
+          }
+        },
+        "missing_or_failed_outputs": 0,
+        "subgroups": {
+          "multi_event=False": {
+            "passages": 927,
+            "precision": 0.4560085836909871,
+            "recall": 0.45846817691477887,
+            "f1": 0.457235072619688,
+            "tp": 425,
+            "fp": 507,
+            "fn": 502
+          },
+          "multi_event=True": {
+            "passages": 40,
+            "precision": 0.2,
+            "recall": 0.10975609756097561,
+            "f1": 0.14173228346456693,
+            "tp": 9,
+            "fp": 36,
+            "fn": 73
+          },
+          "multi_drug=False": {
+            "passages": 784,
+            "precision": 0.4857496902106567,
+            "recall": 0.4774665042630938,
+            "f1": 0.48157248157248156,
+            "tp": 392,
+            "fp": 415,
+            "fn": 429
+          },
+          "multi_drug=True": {
+            "passages": 183,
+            "precision": 0.24705882352941178,
+            "recall": 0.22340425531914893,
+            "f1": 0.2346368715083799,
+            "tp": 42,
+            "fp": 128,
+            "fn": 146
+          },
+          "discontinuous=False": {
+            "passages": 929,
+            "precision": 0.463519313304721,
+            "recall": 0.44536082474226807,
+            "f1": 0.45425867507886436,
+            "tp": 432,
+            "fp": 500,
+            "fn": 538
+          },
+          "discontinuous=True": {
+            "passages": 38,
+            "precision": 0.044444444444444446,
+            "recall": 0.05128205128205128,
+            "f1": 0.047619047619047616,
+            "tp": 2,
+            "fp": 43,
+            "fn": 37
+          }
+        },
+        "unmatched_prediction_error_categories": {
+          "spurious_or_wrong_boundary_trigger": 274,
+          "wrong_drug": 75,
+          "wrong_effect": 142,
+          "wrong_drug_and_effect": 47,
+          "wrong_event_type_at_correct_trigger": 5
+        },
+        "gold_triggers_with_no_predicted_overlap": 261,
+        "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+        "strict_f1_group_bootstrap_95pct": {
+          "lower": 0.4059122399291722,
+          "upper": 0.46863344517206995,
+          "replicates": 200,
+          "seed": 42,
+          "grouping": "source-ID prefix proxy"
+        },
+        "prediction_identity_validation": {
+          "validated_predictions": 968,
+          "missing_prediction_passages": 0
+        },
+        "split": "test",
+        "run_name": "biomedbert_all_ce",
+        "predictions_sha256": "ac0fc9a29f431e73e2e5bc940f47c38e0ac720824b487a30f8592d3225135321",
+        "data_sha256": "5a93b5a569bf54d865032141a2258b88fe853eb405af6825b56dfa6d6200e460",
+        "final_test": true,
+        "evaluated_at_utc": "2026-10-16T04:49:16.705908+00:00"
+      },
+      "selected_review_policy": "raw",
+      "review_at_25pct": {
+        "random": {
+          "policy": "random",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 278.85,
+          "error_capture_fraction": 0.24941860465116278,
+          "remaining_errors": 839.15,
+          "missed_events_exposed": 143.74,
+          "remaining_missed_events": 431.26,
+          "problem_passages_found": 144.02,
+          "false_predictions_exposed": 135.11,
+          "complete_trigger_misses_exposed": 65.21,
+          "reviewed_candidates": 244.1,
+          "reviewed_characters": 32695.05,
+          "random_repetitions": 100
+        },
+        "raw": {
+          "policy": "raw",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 395,
+          "error_capture_fraction": 0.35330948121645794,
+          "remaining_errors": 723,
+          "missed_events_exposed": 227,
+          "remaining_missed_events": 348,
+          "problem_passages_found": 222,
+          "false_predictions_exposed": 168,
+          "complete_trigger_misses_exposed": 127,
+          "reviewed_candidates": 202,
+          "reviewed_characters": 38581,
+          "lift_over_random_expectation": 1.4117779683318794,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.31673590402742074,
+            "upper": 0.385185532635732,
+            "replicates": 300
+          }
+        },
+        "calibrated": {
+          "policy": "calibrated",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 400,
+          "error_capture_fraction": 0.35778175313059035,
+          "remaining_errors": 718,
+          "missed_events_exposed": 228,
+          "remaining_missed_events": 347,
+          "problem_passages_found": 221,
+          "false_predictions_exposed": 172,
+          "complete_trigger_misses_exposed": 138,
+          "reviewed_candidates": 207,
+          "reviewed_characters": 38986,
+          "lift_over_random_expectation": 1.429648575525954,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.32316990011206725,
+            "upper": 0.38642988910269993,
+            "replicates": 300
+          }
+        },
+        "calibrated_checks": {
+          "policy": "calibrated_checks",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 400,
+          "error_capture_fraction": 0.35778175313059035,
+          "remaining_errors": 718,
+          "missed_events_exposed": 228,
+          "remaining_missed_events": 347,
+          "problem_passages_found": 221,
+          "false_predictions_exposed": 172,
+          "complete_trigger_misses_exposed": 138,
+          "reviewed_candidates": 207,
+          "reviewed_characters": 38986,
+          "lift_over_random_expectation": 1.429648575525954,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.32316990011206725,
+            "upper": 0.38642988910269993,
+            "replicates": 300
+          }
+        },
+        "expected_incorrect_candidates": {
+          "policy": "expected_incorrect_candidates",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 403,
+          "error_capture_fraction": 0.36046511627906974,
+          "remaining_errors": 715,
+          "missed_events_exposed": 207,
+          "remaining_missed_events": 368,
+          "problem_passages_found": 224,
+          "false_predictions_exposed": 196,
+          "complete_trigger_misses_exposed": 116,
+          "reviewed_candidates": 251,
+          "reviewed_characters": 37413,
+          "lift_over_random_expectation": 1.4403709398423985,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.3254247900531173,
+            "upper": 0.3940744098695075,
+            "replicates": 300
+          }
+        },
+        "candidate_count": {
+          "policy": "candidate_count",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 374,
+          "error_capture_fraction": 0.334525939177102,
+          "remaining_errors": 744,
+          "missed_events_exposed": 151,
+          "remaining_missed_events": 424,
+          "problem_passages_found": 174,
+          "false_predictions_exposed": 223,
+          "complete_trigger_misses_exposed": 50,
+          "reviewed_candidates": 330,
+          "reviewed_characters": 33457,
+          "lift_over_random_expectation": 1.336721418116767,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.29978391226838097,
+            "upper": 0.3657081782606649,
+            "replicates": 300
+          }
+        },
+        "passage_length": {
+          "policy": "passage_length",
+          "budget": 0.25,
+          "reviewed_passages": 242,
+          "captured_errors": 374,
+          "error_capture_fraction": 0.334525939177102,
+          "remaining_errors": 744,
+          "missed_events_exposed": 202,
+          "remaining_missed_events": 373,
+          "problem_passages_found": 188,
+          "false_predictions_exposed": 172,
+          "complete_trigger_misses_exposed": 100,
+          "reviewed_candidates": 234,
+          "reviewed_characters": 53042,
+          "lift_over_random_expectation": 1.336721418116767,
+          "capture_group_bootstrap_95pct": {
+            "lower": 0.30912249899991745,
+            "upper": 0.359653160468596,
+            "replicates": 300
+          }
+        }
+      },
+      "reliability": {
+        "candidates": 977,
+        "correct_candidates": 434,
+        "brier_raw": 0.29499869851933674,
+        "brier_calibrated": 0.1953778518882306,
+        "brier_calibration_prevalence_constant": 0.24688880160516066,
+        "brier_skill_vs_calibration_constant": 0.2086402841361329,
+        "bins": [
+          {
+            "score": "raw",
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 88,
+            "mean_confidence": 0.0,
+            "observed_correctness": 0.25
+          },
+          {
+            "score": "raw",
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 1,
+            "mean_confidence": 0.35226792097091675,
+            "observed_correctness": 0.0
+          },
+          {
+            "score": "raw",
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 161,
+            "mean_confidence": 0.5371134024630176,
+            "observed_correctness": 0.09937888198757763
+          },
+          {
+            "score": "raw",
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 242,
+            "mean_confidence": 0.6963106108932737,
+            "observed_correctness": 0.2892561983471074
+          },
+          {
+            "score": "raw",
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 485,
+            "mean_confidence": 0.926893696321523,
+            "observed_correctness": 0.6721649484536083
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 117,
+            "mean_confidence": 0.08677235673793386,
+            "observed_correctness": 0.18803418803418803
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 267,
+            "mean_confidence": 0.30516291834211423,
+            "observed_correctness": 0.17228464419475656
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 298,
+            "mean_confidence": 0.5091939676020312,
+            "observed_correctness": 0.4563758389261745
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 295,
+            "mean_confidence": 0.6425620843233538,
+            "observed_correctness": 0.7796610169491526
+          },
+          {
+            "score": "calibrated",
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 0,
+            "mean_confidence": null,
+            "observed_correctness": null
+          }
+        ],
+        "limitation": "Candidate calibration excludes missed events; review evaluation includes all gold events."
+      },
+      "challenge": {
+        "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+        "input_passages": 10,
+        "evaluated_passages": 10,
+        "excluded_quarantined_ids": [],
+        "strict_event": {
+          "precision": 0.1,
+          "recall": 0.14285714285714285,
+          "f1": 0.11764705882352941,
+          "tp": 1,
+          "fp": 9,
+          "fn": 6
+        },
+        "relaxed_event_iou_0.5": {
+          "precision": 0.2,
+          "recall": 0.2857142857142857,
+          "f1": 0.23529411764705882,
+          "tp": 2,
+          "fp": 8,
+          "fn": 5
+        },
+        "evidence_segments": {
+          "trigger": {
+            "precision": 0.7,
+            "recall": 1.0,
+            "f1": 0.8235294117647058,
+            "tp": 7,
+            "fp": 3,
+            "fn": 0
+          },
+          "drug": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 3,
+            "fn": 6
+          },
+          "effect": {
+            "precision": 0.5454545454545454,
+            "recall": 0.75,
+            "f1": 0.631578947368421,
+            "tp": 6,
+            "fp": 5,
+            "fn": 2
+          }
+        },
+        "per_event_type": {
+          "Adverse_event": {
+            "precision": 0.125,
+            "recall": 0.2,
+            "f1": 0.15384615384615385,
+            "tp": 1,
+            "fp": 7,
+            "fn": 4
+          },
+          "Potential_therapeutic_event": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 2,
+            "fn": 2
+          }
+        },
+        "trigger_type_confusion": {
+          "Adverse_event": {
+            "Adverse_event": 5
+          },
+          "Potential_therapeutic_event": {
+            "Potential_therapeutic_event": 2
+          },
+          "spurious_trigger": {
+            "Adverse_event": 3
+          }
+        },
+        "missing_or_failed_outputs": 0,
+        "subgroups": {
+          "multi_event=False": {
+            "passages": 9,
+            "precision": 0.125,
+            "recall": 0.2,
+            "f1": 0.15384615384615385,
+            "tp": 1,
+            "fp": 7,
+            "fn": 4
+          },
+          "multi_event=True": {
+            "passages": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 2,
+            "fn": 2
+          },
+          "multi_drug=False": {
+            "passages": 10,
+            "precision": 0.1,
+            "recall": 0.14285714285714285,
+            "f1": 0.11764705882352941,
+            "tp": 1,
+            "fp": 9,
+            "fn": 6
+          },
+          "multi_drug=True": {
+            "passages": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "discontinuous=False": {
+            "passages": 9,
+            "precision": 0.1111111111111111,
+            "recall": 0.16666666666666666,
+            "f1": 0.13333333333333333,
+            "tp": 1,
+            "fp": 8,
+            "fn": 5
+          },
+          "discontinuous=True": {
+            "passages": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          }
+        },
+        "unmatched_prediction_error_categories": {
+          "wrong_drug": 4,
+          "spurious_or_wrong_boundary_trigger": 3,
+          "wrong_drug_and_effect": 2
+        },
+        "gold_triggers_with_no_predicted_overlap": 0,
+        "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+        "dataset": "challenge_test",
+        "annotation": "Self-authored synthetic text, a deliberately small diagnostic suite. Not clinical or external validation.",
+        "run_name": "biomedbert_all_ce",
+        "no_event_passages": 4,
+        "no_event_passages_with_spurious_output": 3
+      }
+    }
+  }
+}
