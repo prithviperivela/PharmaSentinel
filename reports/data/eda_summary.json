@@ -1,0 +1,82 @@
+{
+  "calibration": {
+    "passages": 222,
+    "source_groups": 92,
+    "events": 231,
+    "event_types": {
+      "Adverse_event": 211,
+      "Potential_therapeutic_event": 20
+    },
+    "missing_drug": 2,
+    "missing_effect": 18,
+    "multi_event_passages": 9,
+    "discontinuous_role_bundles": 7,
+    "regex_token_length_p50": 18,
+    "regex_token_length_p95": 39,
+    "regex_token_length_max": 77
+  },
+  "model_selection": {
+    "passages": 487,
+    "source_groups": 186,
+    "events": 510,
+    "event_types": {
+      "Adverse_event": 441,
+      "Potential_therapeutic_event": 69
+    },
+    "missing_drug": 7,
+    "missing_effect": 51,
+    "multi_event_passages": 23,
+    "discontinuous_role_bundles": 22,
+    "regex_token_length_p50": 21,
+    "regex_token_length_p95": 41,
+    "regex_token_length_max": 60
+  },
+  "policy": {
+    "passages": 252,
+    "source_groups": 93,
+    "events": 262,
+    "event_types": {
+      "Adverse_event": 234,
+      "Potential_therapeutic_event": 28
+    },
+    "missing_drug": 3,
+    "missing_effect": 25,
+    "multi_event_passages": 9,
+    "discontinuous_role_bundles": 8,
+    "regex_token_length_p50": 21,
+    "regex_token_length_p95": 43,
+    "regex_token_length_max": 71
+  },
+  "test": {
+    "passages": 968,
+    "source_groups": 359,
+    "events": 1009,
+    "event_types": {
+      "Adverse_event": 889,
+      "Potential_therapeutic_event": 120
+    },
+    "missing_drug": 13,
+    "missing_effect": 107,
+    "multi_event_passages": 40,
+    "discontinuous_role_bundles": 38,
+    "regex_token_length_p50": 20,
+    "regex_token_length_p95": 43,
+    "regex_token_length_max": 107
+  },
+  "train": {
+    "passages": 2898,
+    "source_groups": 1108,
+    "events": 3004,
+    "event_types": {
+      "Adverse_event": 2710,
+      "Potential_therapeutic_event": 294
+    },
+    "missing_drug": 32,
+    "missing_effect": 223,
+    "multi_event_passages": 100,
+    "discontinuous_role_bundles": 144,
+    "regex_token_length_p50": 20,
+    "regex_token_length_p95": 42,
+    "regex_token_length_max": 93
+  }
+}

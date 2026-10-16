@@ -1,0 +1,24 @@
+{
+  "dataset": "PHEE2 source annotations",
+  "revision": "a90c680b08464e731635eb2d2f2c49be6ad5e3e5",
+  "files": {
+    "train": {
+      "url": "https://raw.githubusercontent.com/ZhaoyueSun/phee-with-chatgpt/a90c680b08464e731635eb2d2f2c49be6ad5e3e5/data/datasets/phee2/source/train.json",
+      "sha256": "381210851bfc8ac7e34eeba1e134bb4b9be595f29806eb687c42b7623f536ace",
+      "git_blob": "5621607be8fe40273c20004f053e4126fd1e65de",
+      "records": 2898
+    },
+    "dev": {
+      "url": "https://raw.githubusercontent.com/ZhaoyueSun/phee-with-chatgpt/a90c680b08464e731635eb2d2f2c49be6ad5e3e5/data/datasets/phee2/source/dev.json",
+      "sha256": "3fef1a8efe87bf144c6eca2ede1e5ade5c6d77444477924483d22f955385375f",
+      "git_blob": "fb62f0981dc34685e4521c56af305ac52a42989f",
+      "records": 961
+    },
+    "test": {
+      "url": "https://raw.githubusercontent.com/ZhaoyueSun/phee-with-chatgpt/a90c680b08464e731635eb2d2f2c49be6ad5e3e5/data/datasets/phee2/source/test.json",
+      "sha256": "230bca8c6164d40c54b5e7b7eb9f7eb560da94b27229d940cbc516f157aba4e8",
+      "git_blob": "c69ab4a8859a17938fdc4d11558d72a59e382d33",
+      "records": 968
+    }
+  }
+}

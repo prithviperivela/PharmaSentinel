@@ -1,0 +1,8 @@
+{
+  "method": "lowercase word-trigram Jaccard",
+  "threshold": 0.9,
+  "minimum_distinct_trigrams": 8,
+  "cross_split_candidates": [],
+  "candidate_count": 0,
+  "limitations": "Lexical screen; short passages and semantic paraphrases are not covered. Candidates require manual adjudication."
+}

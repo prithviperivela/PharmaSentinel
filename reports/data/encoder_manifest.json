@@ -1,0 +1,31 @@
+{
+  "repository": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+  "revision": "e1354b7a3a09615f6aba48dfad4b7a613eef7062",
+  "files": {
+    "config.json": {
+      "bytes": 385,
+      "sha256": "56bab767c02bc792897638feb8addc06d483d9c73769a5f554bbabea1f5507a1",
+      "upstream_blob": "f8a8cd37533eee7ab2f72c09890b360824352953"
+    },
+    "tokenizer_config.json": {
+      "bytes": 28,
+      "sha256": "53b6f42b8b8daddbdc6d3532c324187a92b46c1602bd6e8d4ad5a413b4fc90e1",
+      "upstream_blob": "a661b1a138dac6dc5590367402d100765010ffd6"
+    },
+    "vocab.txt": {
+      "bytes": 226150,
+      "sha256": "79489a52be45e6fa033521e8ce8e4f62aedc0a742ee2aa6fc04667e5b0b1454d",
+      "upstream_blob": "9d595d9c20feef7012f174efaaa5eb621910588e"
+    },
+    "LICENSE.md": {
+      "bytes": 1072,
+      "sha256": "8542b3a65414366ae3228e8f1658e538ec95f9b8855599c9c6e36751d592be66",
+      "upstream_blob": "2f66bdf7dfaeb7d0c1a5fab2faab9d45f20356d2"
+    },
+    "pytorch_model.bin": {
+      "bytes": 440474434,
+      "sha256": "ad7bbb66376cfd6b2db3447192b034efe016337cbef135c35c411fd61b13c193",
+      "upstream_blob": "65b2aad8c40e65c3264ff50800ecb16839c04c94"
+    }
+  }
+}
