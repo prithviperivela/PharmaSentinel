@@ -1,0 +1,32 @@
+{
+  "split": "test",
+  "first": "baseline",
+  "second": "pharmasentinel_final",
+  "strict_core_event": {
+    "baseline": {
+      "precision": 0.1264559068219634,
+      "recall": 0.1506442021803766,
+      "f1": 0.13749434644957034,
+      "tp": 152,
+      "fp": 1050,
+      "fn": 857
+    },
+    "pharmasentinel_final": {
+      "precision": 0.23768877216021012,
+      "recall": 0.3587710604558969,
+      "f1": 0.2859399684044234,
+      "tp": 362,
+      "fp": 1161,
+      "fn": 647
+    }
+  },
+  "f1_difference_second_minus_first": 0.14844562195485303,
+  "paired_source_group_bootstrap_95pct": {
+    "lower": 0.12145449230875714,
+    "upper": 0.17479794512535704,
+    "replicates": 500,
+    "seed": 42
+  },
+  "data_sha256": "5a93b5a569bf54d865032141a2258b88fe853eb405af6825b56dfa6d6200e460",
+  "limitation": "Source-ID prefix proxy grouping; fixed training runs, not training-seed uncertainty or clinical validation."
+}

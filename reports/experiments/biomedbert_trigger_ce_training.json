@@ -1,0 +1,67 @@
+{
+  "model_type": "biomedbert",
+  "run_name": "biomedbert_trigger_ce",
+  "encoder": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+  "encoder_revision": "e1354b7a3a09615f6aba48dfad4b7a613eef7062",
+  "freeze_encoder": false,
+  "training_limit": null,
+  "training_examples": 2898,
+  "unsupported_training_ids": [],
+  "alignment_diagnostics": {
+    "collisions": 4,
+    "unaligned_gold_segments": 15
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.22245892917239632,
+      "selection_event_f1": 0.3609341825902335,
+      "selection_mean_segment_f1": 0.6664545112171687
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.10237020968405669,
+      "selection_event_f1": 0.3917098445595855,
+      "selection_mean_segment_f1": 0.6841582279319954
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.08012028237081263,
+      "selection_event_f1": 0.39235412474849096,
+      "selection_mean_segment_f1": 0.6978348148202098
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.06352445399311703,
+      "selection_event_f1": 0.3942505133470226,
+      "selection_mean_segment_f1": 0.7063883868872343
+    }
+  ],
+  "best_selection": [
+    0.3942505133470226,
+    0.7063883868872343
+  ],
+  "training_seconds": 413.0328392000083,
+  "environment": {
+    "python": "3.13.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "torch": "2.9.0+cu129",
+    "transformers": "5.16.1",
+    "numpy": "2.4.2",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.9.0",
+    "plotly": "7.1.0"
+  },
+  "data_hashes": {
+    "train": "d995c525955f65008c094f15d78aa493af10ff85b00ff7de43a52f2a6c16dddd",
+    "policy": "be24da3aa8a833057b8dd2ce8af37261323f2432cc79241ee24b9dbf36195ab9",
+    "calibration": "9853d883ea96b8914b1314796db93abb3c63e00525852cfb1f5bb479bc7b56bd",
+    "model_selection": "9ded33f3c22c12020ac5d881cf9c6f18520921757b441902ca7bfdae92e2606f",
+    "test": "5a93b5a569bf54d865032141a2258b88fe853eb405af6825b56dfa6d6200e460"
+  },
+  "weights_sha256": "41b2ae4bf01ac90b1cd58cd64bf7e3afa96f0b994c9d67c7a30ee70afc9ae3dd",
+  "config_sha256": "37cdcd627025254f430c3162c2194fe36fde6d97bbe9ad00453677622307f01e",
+  "test_evaluated": false,
+  "architecture": "shared encoder; typed trigger BIO head; trigger-pooled representation concatenated to token states for separate drug/effect BIO heads",
+  "limitation": "Gold triggers condition role training; predicted triggers condition inference. Fine-grained entity grouping and overlapping same-role spans remain limitations."
+}

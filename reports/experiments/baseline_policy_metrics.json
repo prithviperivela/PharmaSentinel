@@ -1,0 +1,165 @@
+{
+  "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+  "input_passages": 252,
+  "evaluated_passages": 252,
+  "excluded_quarantined_ids": [],
+  "strict_event": {
+    "precision": 0.12745098039215685,
+    "recall": 0.14885496183206107,
+    "f1": 0.13732394366197184,
+    "tp": 39,
+    "fp": 267,
+    "fn": 223
+  },
+  "relaxed_event_iou_0.5": {
+    "precision": 0.24509803921568626,
+    "recall": 0.2862595419847328,
+    "f1": 0.2640845070422535,
+    "tp": 75,
+    "fp": 231,
+    "fn": 187
+  },
+  "evidence_segments": {
+    "trigger": {
+      "precision": 0.5816993464052288,
+      "recall": 0.6793893129770993,
+      "f1": 0.6267605633802817,
+      "tp": 178,
+      "fp": 128,
+      "fn": 84
+    },
+    "drug": {
+      "precision": 0.6962962962962963,
+      "recall": 0.5749235474006116,
+      "f1": 0.6298157453936348,
+      "tp": 188,
+      "fp": 82,
+      "fn": 139
+    },
+    "effect": {
+      "precision": 0.43820224719101125,
+      "recall": 0.46987951807228917,
+      "f1": 0.45348837209302323,
+      "tp": 117,
+      "fp": 150,
+      "fn": 132
+    }
+  },
+  "per_event_type": {
+    "Adverse_event": {
+      "precision": 0.13768115942028986,
+      "recall": 0.1623931623931624,
+      "f1": 0.14901960784313725,
+      "tp": 38,
+      "fp": 238,
+      "fn": 196
+    },
+    "Potential_therapeutic_event": {
+      "precision": 0.03333333333333333,
+      "recall": 0.03571428571428571,
+      "f1": 0.034482758620689655,
+      "tp": 1,
+      "fp": 29,
+      "fn": 27
+    }
+  },
+  "trigger_type_confusion": {
+    "Adverse_event": {
+      "Adverse_event": 171,
+      "missed_trigger": 61,
+      "Potential_therapeutic_event": 2
+    },
+    "spurious_trigger": {
+      "Adverse_event": 102,
+      "Potential_therapeutic_event": 21
+    },
+    "Potential_therapeutic_event": {
+      "missed_trigger": 18,
+      "Adverse_event": 3,
+      "Potential_therapeutic_event": 7
+    }
+  },
+  "missing_or_failed_outputs": 0,
+  "subgroups": {
+    "multi_event=False": {
+      "passages": 243,
+      "precision": 0.12758620689655173,
+      "recall": 0.1522633744855967,
+      "f1": 0.13883677298311445,
+      "tp": 37,
+      "fp": 253,
+      "fn": 206
+    },
+    "multi_event=True": {
+      "passages": 9,
+      "precision": 0.125,
+      "recall": 0.10526315789473684,
+      "f1": 0.11428571428571428,
+      "tp": 2,
+      "fp": 14,
+      "fn": 17
+    },
+    "multi_drug=False": {
+      "passages": 194,
+      "precision": 0.15283842794759825,
+      "recall": 0.17326732673267325,
+      "f1": 0.16241299303944315,
+      "tp": 35,
+      "fp": 194,
+      "fn": 167
+    },
+    "multi_drug=True": {
+      "passages": 58,
+      "precision": 0.05194805194805195,
+      "recall": 0.06666666666666667,
+      "f1": 0.058394160583941604,
+      "tp": 4,
+      "fp": 73,
+      "fn": 56
+    },
+    "discontinuous=False": {
+      "passages": 244,
+      "precision": 0.13310580204778158,
+      "recall": 0.15354330708661418,
+      "f1": 0.1425959780621572,
+      "tp": 39,
+      "fp": 254,
+      "fn": 215
+    },
+    "discontinuous=True": {
+      "passages": 8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 13,
+      "fn": 8
+    }
+  },
+  "unmatched_prediction_error_categories": {
+    "wrong_drug_and_effect": 59,
+    "spurious_or_wrong_boundary_trigger": 123,
+    "wrong_effect": 43,
+    "wrong_drug": 37,
+    "wrong_event_type_at_correct_trigger": 5
+  },
+  "gold_triggers_with_no_predicted_overlap": 69,
+  "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+  "strict_f1_group_bootstrap_95pct": {
+    "lower": 0.10784089640462774,
+    "upper": 0.17872021182700795,
+    "replicates": 200,
+    "seed": 42,
+    "grouping": "source-ID prefix proxy"
+  },
+  "prediction_identity_validation": {
+    "validated_predictions": 252,
+    "missing_prediction_passages": 0
+  },
+  "split": "policy",
+  "run_name": "baseline",
+  "predictions_sha256": "2281d10c467a11254c85fa84e9e41523b7cb801a2289e755138bdc615637929f",
+  "data_sha256": "be24da3aa8a833057b8dd2ce8af37261323f2432cc79241ee24b9dbf36195ab9",
+  "final_test": false,
+  "evaluated_at_utc": "2026-10-15T17:01:13.638891+00:00"
+}

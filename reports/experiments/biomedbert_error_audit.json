@@ -1,0 +1,11 @@
+{
+  "split": "model_selection",
+  "category_counts": {
+    "exact_trigger_wrong_fields": 201,
+    "no_gold_trigger_overlap": 322,
+    "trigger_boundary": 56
+  },
+  "local_example_count": 9,
+  "sampling": "First three by passage ID per category; descriptive examples, not prevalence estimates",
+  "interpretation": "Benchmark-relative errors. Annotation absence does not prove medical falsehood. Original passages remain local."
+}

@@ -1,0 +1,65 @@
+{
+  "split": "model_selection",
+  "fixed_threshold": 0.0,
+  "primary_seed": 42,
+  "repeat_seed": 43,
+  "results": {
+    "biomedbert_all_ce": {
+      "strict_event": {
+        "precision": 0.4465811965811966,
+        "recall": 0.40980392156862744,
+        "f1": 0.4274028629856851,
+        "tp": 209,
+        "fp": 259,
+        "fn": 301
+      },
+      "per_event_type": {
+        "Adverse_event": {
+          "precision": 0.454337899543379,
+          "recall": 0.4512471655328798,
+          "f1": 0.4527872582480091,
+          "tp": 199,
+          "fp": 239,
+          "fn": 242
+        },
+        "Potential_therapeutic_event": {
+          "precision": 0.3333333333333333,
+          "recall": 0.14492753623188406,
+          "f1": 0.20202020202020202,
+          "tp": 10,
+          "fp": 20,
+          "fn": 59
+        }
+      }
+    },
+    "precision_seed43": {
+      "strict_event": {
+        "precision": 0.4171539961013645,
+        "recall": 0.4196078431372549,
+        "f1": 0.41837732160312807,
+        "tp": 214,
+        "fp": 299,
+        "fn": 296
+      },
+      "per_event_type": {
+        "Adverse_event": {
+          "precision": 0.45045045045045046,
+          "recall": 0.45351473922902497,
+          "f1": 0.4519774011299435,
+          "tp": 200,
+          "fp": 244,
+          "fn": 241
+        },
+        "Potential_therapeutic_event": {
+          "precision": 0.2028985507246377,
+          "recall": 0.2028985507246377,
+          "f1": 0.2028985507246377,
+          "tp": 14,
+          "fp": 55,
+          "fn": 55
+        }
+      }
+    }
+  },
+  "interpretation": "Two seeds describe limited training variability. Seed 42 remains primary regardless of the repeat result. No test or policy labels used."
+}

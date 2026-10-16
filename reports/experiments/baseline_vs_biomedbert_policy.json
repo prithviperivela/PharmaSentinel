@@ -1,0 +1,32 @@
+{
+  "split": "policy",
+  "first": "baseline",
+  "second": "biomedbert",
+  "strict_core_event": {
+    "baseline": {
+      "precision": 0.12745098039215685,
+      "recall": 0.14885496183206107,
+      "f1": 0.13732394366197184,
+      "tp": 39,
+      "fp": 267,
+      "fn": 223
+    },
+    "biomedbert": {
+      "precision": 0.24754901960784315,
+      "recall": 0.38549618320610685,
+      "f1": 0.30149253731343284,
+      "tp": 101,
+      "fp": 307,
+      "fn": 161
+    }
+  },
+  "f1_difference_second_minus_first": 0.164168593651461,
+  "paired_source_group_bootstrap_95pct": {
+    "lower": 0.11298047540755787,
+    "upper": 0.2202036117122844,
+    "replicates": 500,
+    "seed": 42
+  },
+  "data_sha256": "be24da3aa8a833057b8dd2ce8af37261323f2432cc79241ee24b9dbf36195ab9",
+  "limitation": "Source-ID prefix proxy grouping; fixed training runs, not training-seed uncertainty or clinical validation."
+}

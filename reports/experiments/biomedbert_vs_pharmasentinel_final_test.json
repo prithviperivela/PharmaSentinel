@@ -1,0 +1,32 @@
+{
+  "split": "test",
+  "first": "biomedbert",
+  "second": "pharmasentinel_final",
+  "strict_core_event": {
+    "biomedbert": {
+      "precision": 0.2348777348777349,
+      "recall": 0.36174430128840435,
+      "f1": 0.28482247366367536,
+      "tp": 365,
+      "fp": 1189,
+      "fn": 644
+    },
+    "pharmasentinel_final": {
+      "precision": 0.23768877216021012,
+      "recall": 0.3587710604558969,
+      "f1": 0.2859399684044234,
+      "tp": 362,
+      "fp": 1161,
+      "fn": 647
+    }
+  },
+  "f1_difference_second_minus_first": 0.0011174947407480151,
+  "paired_source_group_bootstrap_95pct": {
+    "lower": -0.001526600216443076,
+    "upper": 0.0033611437231588184,
+    "replicates": 500,
+    "seed": 42
+  },
+  "data_sha256": "5a93b5a569bf54d865032141a2258b88fe853eb405af6825b56dfa6d6200e460",
+  "limitation": "Source-ID prefix proxy grouping; fixed training runs, not training-seed uncertainty or clinical validation."
+}

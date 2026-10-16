@@ -1,0 +1,539 @@
+{
+  "split": "test",
+  "run_name": "biomedbert_all_ce",
+  "reliability": {
+    "candidates": 977,
+    "correct_candidates": 434,
+    "brier_raw": 0.29499869851933674,
+    "brier_calibrated": 0.1953778518882306,
+    "brier_calibration_prevalence_constant": 0.24688880160516066,
+    "brier_skill_vs_calibration_constant": 0.2086402841361329,
+    "bins": [
+      {
+        "score": "raw",
+        "lower": 0.0,
+        "upper": 0.2,
+        "count": 88,
+        "mean_confidence": 0.0,
+        "observed_correctness": 0.25
+      },
+      {
+        "score": "raw",
+        "lower": 0.2,
+        "upper": 0.4,
+        "count": 1,
+        "mean_confidence": 0.35226792097091675,
+        "observed_correctness": 0.0
+      },
+      {
+        "score": "raw",
+        "lower": 0.4,
+        "upper": 0.6,
+        "count": 161,
+        "mean_confidence": 0.5371134024630176,
+        "observed_correctness": 0.09937888198757763
+      },
+      {
+        "score": "raw",
+        "lower": 0.6,
+        "upper": 0.8,
+        "count": 242,
+        "mean_confidence": 0.6963106108932737,
+        "observed_correctness": 0.2892561983471074
+      },
+      {
+        "score": "raw",
+        "lower": 0.8,
+        "upper": 1.0,
+        "count": 485,
+        "mean_confidence": 0.926893696321523,
+        "observed_correctness": 0.6721649484536083
+      },
+      {
+        "score": "calibrated",
+        "lower": 0.0,
+        "upper": 0.2,
+        "count": 117,
+        "mean_confidence": 0.08677235673793386,
+        "observed_correctness": 0.18803418803418803
+      },
+      {
+        "score": "calibrated",
+        "lower": 0.2,
+        "upper": 0.4,
+        "count": 267,
+        "mean_confidence": 0.30516291834211423,
+        "observed_correctness": 0.17228464419475656
+      },
+      {
+        "score": "calibrated",
+        "lower": 0.4,
+        "upper": 0.6,
+        "count": 298,
+        "mean_confidence": 0.5091939676020312,
+        "observed_correctness": 0.4563758389261745
+      },
+      {
+        "score": "calibrated",
+        "lower": 0.6,
+        "upper": 0.8,
+        "count": 295,
+        "mean_confidence": 0.6425620843233538,
+        "observed_correctness": 0.7796610169491526
+      },
+      {
+        "score": "calibrated",
+        "lower": 0.8,
+        "upper": 1.0,
+        "count": 0,
+        "mean_confidence": null,
+        "observed_correctness": null
+      }
+    ],
+    "limitation": "Candidate calibration excludes missed events; review evaluation includes all gold events."
+  },
+  "review": {
+    "simulation": "oracle-review: reviewing a passage exposes every unmatched predicted/gold event in that passage; no measured time savings",
+    "error_unit": "unmatched prediction (FP) plus unmatched gold event (FN); a wrong candidate may contribute both",
+    "passages": 967,
+    "total_errors": 1118,
+    "total_missed_events": 575,
+    "problem_passages": 577,
+    "tie_break": "descending passage ID after priority",
+    "structural_check_policy": "flags prioritize within the same fixed budget; no automatic approval or mandatory budget overrun",
+    "expected_candidate_policy": "sum(1 - calibrated candidate correctness); no-output/failure fallback=1; does not probabilistically estimate missed events",
+    "workload_caveat": "Equal passage counts are not equal time or effort. Candidate counts and source-character workload are reported separately; neither is a measured time cost.",
+    "seed": 42,
+    "interval_scope": "Source-prefix group resampling with reranking and budget recomputation; fixed model/calibrator, no training or human-review uncertainty.",
+    "diagnostic_baselines": "candidate_count and passage_length are diagnostic comparisons, excluded from the predeclared four-policy selection",
+    "results": [
+      {
+        "policy": "random",
+        "budget": 0.1,
+        "reviewed_passages": 97,
+        "captured_errors": 111.89,
+        "error_capture_fraction": 0.10008050089445439,
+        "remaining_errors": 1006.11,
+        "missed_events_exposed": 57.66,
+        "remaining_missed_events": 517.34,
+        "problem_passages_found": 57.59,
+        "false_predictions_exposed": 54.23,
+        "complete_trigger_misses_exposed": 26.35,
+        "reviewed_candidates": 97.98,
+        "reviewed_characters": 13149.74,
+        "random_repetitions": 100
+      },
+      {
+        "policy": "raw",
+        "budget": 0.1,
+        "reviewed_passages": 97,
+        "captured_errors": 130,
+        "error_capture_fraction": 0.11627906976744186,
+        "remaining_errors": 988,
+        "missed_events_exposed": 92,
+        "remaining_missed_events": 483,
+        "problem_passages_found": 85,
+        "false_predictions_exposed": 38,
+        "complete_trigger_misses_exposed": 66,
+        "reviewed_candidates": 52,
+        "reviewed_characters": 14975,
+        "lift_over_random_expectation": 1.1591944377847039,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.10451845121610288,
+          "upper": 0.1354668420094412,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "calibrated",
+        "budget": 0.1,
+        "reviewed_passages": 97,
+        "captured_errors": 121,
+        "error_capture_fraction": 0.10822898032200358,
+        "remaining_errors": 997,
+        "missed_events_exposed": 101,
+        "remaining_missed_events": 474,
+        "problem_passages_found": 94,
+        "false_predictions_exposed": 20,
+        "complete_trigger_misses_exposed": 89,
+        "reviewed_candidates": 25,
+        "reviewed_characters": 15733,
+        "lift_over_random_expectation": 1.0789425151688399,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.08998762140544658,
+          "upper": 0.12476896887159532,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "calibrated_checks",
+        "budget": 0.1,
+        "reviewed_passages": 97,
+        "captured_errors": 121,
+        "error_capture_fraction": 0.10822898032200358,
+        "remaining_errors": 997,
+        "missed_events_exposed": 101,
+        "remaining_missed_events": 474,
+        "problem_passages_found": 94,
+        "false_predictions_exposed": 20,
+        "complete_trigger_misses_exposed": 89,
+        "reviewed_candidates": 25,
+        "reviewed_characters": 15733,
+        "lift_over_random_expectation": 1.0789425151688399,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.08998762140544658,
+          "upper": 0.12476896887159532,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "expected_incorrect_candidates",
+        "budget": 0.1,
+        "reviewed_passages": 97,
+        "captured_errors": 205,
+        "error_capture_fraction": 0.18336314847942756,
+        "remaining_errors": 913,
+        "missed_events_exposed": 71,
+        "remaining_missed_events": 504,
+        "problem_passages_found": 97,
+        "false_predictions_exposed": 134,
+        "complete_trigger_misses_exposed": 20,
+        "reviewed_candidates": 170,
+        "reviewed_characters": 14971,
+        "lift_over_random_expectation": 1.8279604595835717,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.1601876601997814,
+          "upper": 0.20395327942497754,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "candidate_count",
+        "budget": 0.1,
+        "reviewed_passages": 97,
+        "captured_errors": 213,
+        "error_capture_fraction": 0.19051878354203935,
+        "remaining_errors": 905,
+        "missed_events_exposed": 69,
+        "remaining_missed_events": 506,
+        "problem_passages_found": 94,
+        "false_predictions_exposed": 144,
+        "complete_trigger_misses_exposed": 13,
+        "reviewed_candidates": 185,
+        "reviewed_characters": 14363,
+        "lift_over_random_expectation": 1.8992955019087843,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.16397091714640277,
+          "upper": 0.2085097352036629,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "passage_length",
+        "budget": 0.1,
+        "reviewed_passages": 97,
+        "captured_errors": 170,
+        "error_capture_fraction": 0.1520572450805009,
+        "remaining_errors": 948,
+        "missed_events_exposed": 92,
+        "remaining_missed_events": 483,
+        "problem_passages_found": 80,
+        "false_predictions_exposed": 78,
+        "complete_trigger_misses_exposed": 49,
+        "reviewed_candidates": 96,
+        "reviewed_characters": 25445,
+        "lift_over_random_expectation": 1.5158696494107666,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.13179951235314646,
+          "upper": 0.16928331259332063,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "random",
+        "budget": 0.25,
+        "reviewed_passages": 242,
+        "captured_errors": 278.85,
+        "error_capture_fraction": 0.24941860465116278,
+        "remaining_errors": 839.15,
+        "missed_events_exposed": 143.74,
+        "remaining_missed_events": 431.26,
+        "problem_passages_found": 144.02,
+        "false_predictions_exposed": 135.11,
+        "complete_trigger_misses_exposed": 65.21,
+        "reviewed_candidates": 244.1,
+        "reviewed_characters": 32695.05,
+        "random_repetitions": 100
+      },
+      {
+        "policy": "raw",
+        "budget": 0.25,
+        "reviewed_passages": 242,
+        "captured_errors": 395,
+        "error_capture_fraction": 0.35330948121645794,
+        "remaining_errors": 723,
+        "missed_events_exposed": 227,
+        "remaining_missed_events": 348,
+        "problem_passages_found": 222,
+        "false_predictions_exposed": 168,
+        "complete_trigger_misses_exposed": 127,
+        "reviewed_candidates": 202,
+        "reviewed_characters": 38581,
+        "lift_over_random_expectation": 1.4117779683318794,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.31673590402742074,
+          "upper": 0.385185532635732,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "calibrated",
+        "budget": 0.25,
+        "reviewed_passages": 242,
+        "captured_errors": 400,
+        "error_capture_fraction": 0.35778175313059035,
+        "remaining_errors": 718,
+        "missed_events_exposed": 228,
+        "remaining_missed_events": 347,
+        "problem_passages_found": 221,
+        "false_predictions_exposed": 172,
+        "complete_trigger_misses_exposed": 138,
+        "reviewed_candidates": 207,
+        "reviewed_characters": 38986,
+        "lift_over_random_expectation": 1.429648575525954,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.32316990011206725,
+          "upper": 0.38642988910269993,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "calibrated_checks",
+        "budget": 0.25,
+        "reviewed_passages": 242,
+        "captured_errors": 400,
+        "error_capture_fraction": 0.35778175313059035,
+        "remaining_errors": 718,
+        "missed_events_exposed": 228,
+        "remaining_missed_events": 347,
+        "problem_passages_found": 221,
+        "false_predictions_exposed": 172,
+        "complete_trigger_misses_exposed": 138,
+        "reviewed_candidates": 207,
+        "reviewed_characters": 38986,
+        "lift_over_random_expectation": 1.429648575525954,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.32316990011206725,
+          "upper": 0.38642988910269993,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "expected_incorrect_candidates",
+        "budget": 0.25,
+        "reviewed_passages": 242,
+        "captured_errors": 403,
+        "error_capture_fraction": 0.36046511627906974,
+        "remaining_errors": 715,
+        "missed_events_exposed": 207,
+        "remaining_missed_events": 368,
+        "problem_passages_found": 224,
+        "false_predictions_exposed": 196,
+        "complete_trigger_misses_exposed": 116,
+        "reviewed_candidates": 251,
+        "reviewed_characters": 37413,
+        "lift_over_random_expectation": 1.4403709398423985,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.3254247900531173,
+          "upper": 0.3940744098695075,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "candidate_count",
+        "budget": 0.25,
+        "reviewed_passages": 242,
+        "captured_errors": 374,
+        "error_capture_fraction": 0.334525939177102,
+        "remaining_errors": 744,
+        "missed_events_exposed": 151,
+        "remaining_missed_events": 424,
+        "problem_passages_found": 174,
+        "false_predictions_exposed": 223,
+        "complete_trigger_misses_exposed": 50,
+        "reviewed_candidates": 330,
+        "reviewed_characters": 33457,
+        "lift_over_random_expectation": 1.336721418116767,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.29978391226838097,
+          "upper": 0.3657081782606649,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "passage_length",
+        "budget": 0.25,
+        "reviewed_passages": 242,
+        "captured_errors": 374,
+        "error_capture_fraction": 0.334525939177102,
+        "remaining_errors": 744,
+        "missed_events_exposed": 202,
+        "remaining_missed_events": 373,
+        "problem_passages_found": 188,
+        "false_predictions_exposed": 172,
+        "complete_trigger_misses_exposed": 100,
+        "reviewed_candidates": 234,
+        "reviewed_characters": 53042,
+        "lift_over_random_expectation": 1.336721418116767,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.30912249899991745,
+          "upper": 0.359653160468596,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "random",
+        "budget": 0.5,
+        "reviewed_passages": 484,
+        "captured_errors": 561.89,
+        "error_capture_fraction": 0.5025849731663685,
+        "remaining_errors": 556.11,
+        "missed_events_exposed": 288.14,
+        "remaining_missed_events": 286.86,
+        "problem_passages_found": 289.39,
+        "false_predictions_exposed": 273.75,
+        "complete_trigger_misses_exposed": 129.82,
+        "reviewed_candidates": 490.12,
+        "reviewed_characters": 65783.55,
+        "random_repetitions": 100
+      },
+      {
+        "policy": "raw",
+        "budget": 0.5,
+        "reviewed_passages": 484,
+        "captured_errors": 803,
+        "error_capture_fraction": 0.7182468694096601,
+        "remaining_errors": 315,
+        "missed_events_exposed": 417,
+        "remaining_missed_events": 158,
+        "problem_passages_found": 419,
+        "false_predictions_exposed": 386,
+        "complete_trigger_misses_exposed": 210,
+        "reviewed_candidates": 492,
+        "reviewed_characters": 75683,
+        "lift_over_random_expectation": 1.4350097576841763,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.6855869814786468,
+          "upper": 0.7516031497976248,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "calibrated",
+        "budget": 0.5,
+        "reviewed_passages": 484,
+        "captured_errors": 796,
+        "error_capture_fraction": 0.7119856887298748,
+        "remaining_errors": 322,
+        "missed_events_exposed": 413,
+        "remaining_missed_events": 162,
+        "problem_passages_found": 415,
+        "false_predictions_exposed": 383,
+        "complete_trigger_misses_exposed": 208,
+        "reviewed_candidates": 492,
+        "reviewed_characters": 75651,
+        "lift_over_random_expectation": 1.422500332648324,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.6850892350925629,
+          "upper": 0.7471498422497508,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "calibrated_checks",
+        "budget": 0.5,
+        "reviewed_passages": 484,
+        "captured_errors": 796,
+        "error_capture_fraction": 0.7119856887298748,
+        "remaining_errors": 322,
+        "missed_events_exposed": 413,
+        "remaining_missed_events": 162,
+        "problem_passages_found": 415,
+        "false_predictions_exposed": 383,
+        "complete_trigger_misses_exposed": 208,
+        "reviewed_candidates": 492,
+        "reviewed_characters": 75651,
+        "lift_over_random_expectation": 1.422500332648324,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.6850892350925629,
+          "upper": 0.7471498422497508,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "expected_incorrect_candidates",
+        "budget": 0.5,
+        "reviewed_passages": 484,
+        "captured_errors": 798,
+        "error_capture_fraction": 0.7137745974955277,
+        "remaining_errors": 320,
+        "missed_events_exposed": 413,
+        "remaining_missed_events": 162,
+        "problem_passages_found": 416,
+        "false_predictions_exposed": 385,
+        "complete_trigger_misses_exposed": 208,
+        "reviewed_candidates": 494,
+        "reviewed_characters": 75515,
+        "lift_over_random_expectation": 1.426074454087139,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.6858600224750667,
+          "upper": 0.7471498422497508,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "candidate_count",
+        "budget": 0.5,
+        "reviewed_passages": 484,
+        "captured_errors": 612,
+        "error_capture_fraction": 0.5474060822898033,
+        "remaining_errors": 506,
+        "missed_events_exposed": 275,
+        "remaining_missed_events": 300,
+        "problem_passages_found": 290,
+        "false_predictions_exposed": 337,
+        "complete_trigger_misses_exposed": 98,
+        "reviewed_candidates": 572,
+        "reviewed_characters": 64544,
+        "lift_over_random_expectation": 1.0936811602773548,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.5201221529925726,
+          "upper": 0.5895711283143759,
+          "replicates": 300
+        }
+      },
+      {
+        "policy": "passage_length",
+        "budget": 0.5,
+        "reviewed_passages": 484,
+        "captured_errors": 688,
+        "error_capture_fraction": 0.6153846153846154,
+        "remaining_errors": 430,
+        "missed_events_exposed": 357,
+        "remaining_missed_events": 218,
+        "problem_passages_found": 353,
+        "false_predictions_exposed": 331,
+        "complete_trigger_misses_exposed": 172,
+        "reviewed_candidates": 485,
+        "reviewed_characters": 88939,
+        "lift_over_random_expectation": 1.2294977749523204,
+        "capture_group_bootstrap_95pct": {
+          "lower": 0.5832578047517072,
+          "upper": 0.6464060332612425,
+          "replicates": 300
+        }
+      }
+    ]
+  },
+  "frozen_selected_policy": "raw"
+}

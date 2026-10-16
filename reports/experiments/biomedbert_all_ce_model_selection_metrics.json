@@ -1,0 +1,164 @@
+{
+  "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+  "input_passages": 487,
+  "evaluated_passages": 487,
+  "excluded_quarantined_ids": [],
+  "strict_event": {
+    "precision": 0.4465811965811966,
+    "recall": 0.40980392156862744,
+    "f1": 0.4274028629856851,
+    "tp": 209,
+    "fp": 259,
+    "fn": 301
+  },
+  "relaxed_event_iou_0.5": {
+    "precision": 0.6217948717948718,
+    "recall": 0.5705882352941176,
+    "f1": 0.5950920245398773,
+    "tp": 291,
+    "fp": 177,
+    "fn": 219
+  },
+  "evidence_segments": {
+    "trigger": {
+      "precision": 0.7222222222222222,
+      "recall": 0.6627450980392157,
+      "f1": 0.6912065439672802,
+      "tp": 338,
+      "fp": 130,
+      "fn": 172
+    },
+    "drug": {
+      "precision": 0.8171846435100548,
+      "recall": 0.7186495176848875,
+      "f1": 0.7647562018819504,
+      "tp": 447,
+      "fp": 100,
+      "fn": 175
+    },
+    "effect": {
+      "precision": 0.6390532544378699,
+      "recall": 0.6639344262295082,
+      "f1": 0.6512562814070352,
+      "tp": 324,
+      "fp": 183,
+      "fn": 164
+    }
+  },
+  "per_event_type": {
+    "Adverse_event": {
+      "precision": 0.454337899543379,
+      "recall": 0.4512471655328798,
+      "f1": 0.4527872582480091,
+      "tp": 199,
+      "fp": 239,
+      "fn": 242
+    },
+    "Potential_therapeutic_event": {
+      "precision": 0.3333333333333333,
+      "recall": 0.14492753623188406,
+      "f1": 0.20202020202020202,
+      "tp": 10,
+      "fp": 20,
+      "fn": 59
+    }
+  },
+  "trigger_type_confusion": {
+    "Adverse_event": {
+      "Adverse_event": 320,
+      "missed_trigger": 121
+    },
+    "spurious_trigger": {
+      "Adverse_event": 115,
+      "Potential_therapeutic_event": 12
+    },
+    "Potential_therapeutic_event": {
+      "missed_trigger": 48,
+      "Potential_therapeutic_event": 18,
+      "Adverse_event": 3
+    }
+  },
+  "missing_or_failed_outputs": 0,
+  "subgroups": {
+    "multi_event=False": {
+      "passages": 464,
+      "precision": 0.4575892857142857,
+      "recall": 0.4418103448275862,
+      "f1": 0.44956140350877194,
+      "tp": 205,
+      "fp": 243,
+      "fn": 259
+    },
+    "multi_event=True": {
+      "passages": 23,
+      "precision": 0.2,
+      "recall": 0.08695652173913043,
+      "f1": 0.12121212121212122,
+      "tp": 4,
+      "fp": 16,
+      "fn": 42
+    },
+    "multi_drug=False": {
+      "passages": 393,
+      "precision": 0.48412698412698413,
+      "recall": 0.44096385542168676,
+      "f1": 0.46153846153846156,
+      "tp": 183,
+      "fp": 195,
+      "fn": 232
+    },
+    "multi_drug=True": {
+      "passages": 94,
+      "precision": 0.28888888888888886,
+      "recall": 0.2736842105263158,
+      "f1": 0.2810810810810811,
+      "tp": 26,
+      "fp": 64,
+      "fn": 69
+    },
+    "discontinuous=False": {
+      "passages": 465,
+      "precision": 0.4606741573033708,
+      "recall": 0.42008196721311475,
+      "f1": 0.43944265809217575,
+      "tp": 205,
+      "fp": 240,
+      "fn": 283
+    },
+    "discontinuous=True": {
+      "passages": 22,
+      "precision": 0.17391304347826086,
+      "recall": 0.18181818181818182,
+      "f1": 0.17777777777777778,
+      "tp": 4,
+      "fp": 19,
+      "fn": 18
+    }
+  },
+  "unmatched_prediction_error_categories": {
+    "spurious_or_wrong_boundary_trigger": 127,
+    "wrong_effect": 70,
+    "wrong_drug": 44,
+    "wrong_drug_and_effect": 15,
+    "wrong_event_type_at_correct_trigger": 3
+  },
+  "gold_triggers_with_no_predicted_overlap": 149,
+  "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+  "strict_f1_group_bootstrap_95pct": {
+    "lower": 0.3823894079152205,
+    "upper": 0.4764784824730197,
+    "replicates": 200,
+    "seed": 42,
+    "grouping": "source-ID prefix proxy"
+  },
+  "prediction_identity_validation": {
+    "validated_predictions": 487,
+    "missing_prediction_passages": 0
+  },
+  "split": "model_selection",
+  "run_name": "biomedbert_all_ce",
+  "predictions_sha256": "c3282472f972a557fb962d2363ebb14d7dade6599534acda96c7b07f6073c44d",
+  "data_sha256": "9ded33f3c22c12020ac5d881cf9c6f18520921757b441902ca7bfdae92e2606f",
+  "final_test": false,
+  "evaluated_at_utc": "2026-10-16T04:36:51.456254+00:00"
+}

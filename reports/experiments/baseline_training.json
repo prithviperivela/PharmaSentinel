@@ -1,0 +1,88 @@
+{
+  "model_type": "bilstm",
+  "run_name": "baseline",
+  "scope": "reduced event schema",
+  "training_examples": 2898,
+  "training_limit": null,
+  "unsupported_training_ids": [],
+  "quarantined_training_passages": 0,
+  "alignment_diagnostics": {
+    "collisions": 31,
+    "unaligned_gold_segments": 15
+  },
+  "selection_rule": "maximize strict core-event F1, break ties by mean segment F1",
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.6713930442313517,
+      "selection_event_f1": 0.03842794759825328,
+      "selection_mean_segment_f1": 0.39872602038283084
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.41300981029991274,
+      "selection_event_f1": 0.05597579425113464,
+      "selection_mean_segment_f1": 0.4377630495652729
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.30894165640034954,
+      "selection_event_f1": 0.07171314741035857,
+      "selection_mean_segment_f1": 0.464564347207494
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.23184120550382237,
+      "selection_event_f1": 0.1167381974248927,
+      "selection_mean_segment_f1": 0.4964031605146108
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.17984004133989004,
+      "selection_event_f1": 0.11291702309666382,
+      "selection_mean_segment_f1": 0.5088335924862385
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.13487137946461844,
+      "selection_event_f1": 0.13924050632911392,
+      "selection_mean_segment_f1": 0.5227002849081906
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.10652391864987444,
+      "selection_event_f1": 0.13978494623655913,
+      "selection_mean_segment_f1": 0.5219084735754355
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.08543768389658495,
+      "selection_event_f1": 0.1420863309352518,
+      "selection_mean_segment_f1": 0.5394646632071382
+    }
+  ],
+  "best_selection": [
+    0.1420863309352518,
+    0.5394646632071382
+  ],
+  "training_seconds": 42.277595400009886,
+  "data_hashes": {
+    "train": "d995c525955f65008c094f15d78aa493af10ff85b00ff7de43a52f2a6c16dddd",
+    "policy": "be24da3aa8a833057b8dd2ce8af37261323f2432cc79241ee24b9dbf36195ab9",
+    "calibration": "9853d883ea96b8914b1314796db93abb3c63e00525852cfb1f5bb479bc7b56bd",
+    "model_selection": "9ded33f3c22c12020ac5d881cf9c6f18520921757b441902ca7bfdae92e2606f",
+    "test": "5a93b5a569bf54d865032141a2258b88fe853eb405af6825b56dfa6d6200e460"
+  },
+  "environment": {
+    "python": "3.13.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "torch": "2.9.0+cu129",
+    "transformers": "5.16.1",
+    "numpy": "2.4.2",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.9.0",
+    "plotly": "7.1.0"
+  },
+  "weights_sha256": "24e827fc068193411124f20929c8a325874b6e83ed49c782ca1dae584e80ad25",
+  "test_evaluated": false
+}

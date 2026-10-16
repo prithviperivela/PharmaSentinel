@@ -1,0 +1,146 @@
+{
+  "metric_definition": "Reduced core event: exact event type + trigger/drug/effect span sets; one-to-one multiset matching. Empty gold roles are valid. Not full PHEE schema.",
+  "input_passages": 10,
+  "evaluated_passages": 10,
+  "excluded_quarantined_ids": [],
+  "strict_event": {
+    "precision": 0.2,
+    "recall": 0.2857142857142857,
+    "f1": 0.23529411764705882,
+    "tp": 2,
+    "fp": 8,
+    "fn": 5
+  },
+  "relaxed_event_iou_0.5": {
+    "precision": 0.4,
+    "recall": 0.5714285714285714,
+    "f1": 0.47058823529411764,
+    "tp": 4,
+    "fp": 6,
+    "fn": 3
+  },
+  "evidence_segments": {
+    "trigger": {
+      "precision": 0.7,
+      "recall": 1.0,
+      "f1": 0.8235294117647058,
+      "tp": 7,
+      "fp": 3,
+      "fn": 0
+    },
+    "drug": {
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1": 0.5714285714285714,
+      "tp": 4,
+      "fp": 4,
+      "fn": 2
+    },
+    "effect": {
+      "precision": 0.35294117647058826,
+      "recall": 0.75,
+      "f1": 0.48,
+      "tp": 6,
+      "fp": 11,
+      "fn": 2
+    }
+  },
+  "per_event_type": {
+    "Adverse_event": {
+      "precision": 0.125,
+      "recall": 0.2,
+      "f1": 0.15384615384615385,
+      "tp": 1,
+      "fp": 7,
+      "fn": 4
+    },
+    "Potential_therapeutic_event": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1
+    }
+  },
+  "trigger_type_confusion": {
+    "Adverse_event": {
+      "Adverse_event": 5
+    },
+    "Potential_therapeutic_event": {
+      "Potential_therapeutic_event": 2
+    },
+    "spurious_trigger": {
+      "Adverse_event": 3
+    }
+  },
+  "missing_or_failed_outputs": 0,
+  "subgroups": {
+    "multi_event=False": {
+      "passages": 9,
+      "precision": 0.25,
+      "recall": 0.4,
+      "f1": 0.3076923076923077,
+      "tp": 2,
+      "fp": 6,
+      "fn": 3
+    },
+    "multi_event=True": {
+      "passages": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 2,
+      "fn": 2
+    },
+    "multi_drug=False": {
+      "passages": 10,
+      "precision": 0.2,
+      "recall": 0.2857142857142857,
+      "f1": 0.23529411764705882,
+      "tp": 2,
+      "fp": 8,
+      "fn": 5
+    },
+    "multi_drug=True": {
+      "passages": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "discontinuous=False": {
+      "passages": 9,
+      "precision": 0.2222222222222222,
+      "recall": 0.3333333333333333,
+      "f1": 0.26666666666666666,
+      "tp": 2,
+      "fp": 7,
+      "fn": 4
+    },
+    "discontinuous=True": {
+      "passages": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    }
+  },
+  "unmatched_prediction_error_categories": {
+    "spurious_or_wrong_boundary_trigger": 3,
+    "wrong_effect": 3,
+    "wrong_drug_and_effect": 2
+  },
+  "gold_triggers_with_no_predicted_overlap": 0,
+  "miss_definition": "Strict FN includes wrong fields/boundaries. Gold triggers with no predicted overlap separately measures more complete detection misses.",
+  "dataset": "challenge_test",
+  "annotation": "Self-authored synthetic text, a deliberately small diagnostic suite. Not clinical or external validation.",
+  "run_name": "pharmasentinel_final",
+  "no_event_passages": 4,
+  "no_event_passages_with_spurious_output": 2
+}

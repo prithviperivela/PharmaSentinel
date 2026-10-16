@@ -1,0 +1,1325 @@
+{
+  "reference": {
+    "precision": 0.25290322580645164,
+    "recall": 0.3843137254901961,
+    "f1": 0.3050583657587549,
+    "tp": 196,
+    "fp": 579,
+    "fn": 314
+  },
+  "experiments": {
+    "biomedbert": {
+      "selection_split": "model_selection",
+      "candidates": [
+        {
+          "threshold": 0.0,
+          "eligible": true,
+          "strict_event": {
+            "precision": 0.25290322580645164,
+            "recall": 0.3843137254901961,
+            "f1": 0.3050583657587549,
+            "tp": 196,
+            "fp": 579,
+            "fn": 314
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.27675840978593275,
+              "recall": 0.41043083900226757,
+              "f1": 0.33059360730593607,
+              "tp": 181,
+              "fp": 473,
+              "fn": 260
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.12396694214876033,
+              "recall": 0.21739130434782608,
+              "f1": 0.15789473684210525,
+              "tp": 15,
+              "fp": 106,
+              "fn": 54
+            }
+          },
+          "no_output_passages": 0
+        },
+        {
+          "threshold": 0.5,
+          "eligible": true,
+          "strict_event": {
+            "precision": 0.25654450261780104,
+            "recall": 0.3843137254901961,
+            "f1": 0.3076923076923077,
+            "tp": 196,
+            "fp": 568,
+            "fn": 314
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.2797527047913447,
+              "recall": 0.41043083900226757,
+              "f1": 0.3327205882352941,
+              "tp": 181,
+              "fp": 466,
+              "fn": 260
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.1282051282051282,
+              "recall": 0.21739130434782608,
+              "f1": 0.16129032258064516,
+              "tp": 15,
+              "fp": 102,
+              "fn": 54
+            }
+          },
+          "no_output_passages": 0
+        },
+        {
+          "threshold": 0.6,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.2689075630252101,
+            "recall": 0.3764705882352941,
+            "f1": 0.3137254901960784,
+            "tp": 192,
+            "fp": 522,
+            "fn": 318
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.29180327868852457,
+              "recall": 0.4036281179138322,
+              "f1": 0.33872502378686964,
+              "tp": 178,
+              "fp": 432,
+              "fn": 263
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.1346153846153846,
+              "recall": 0.2028985507246377,
+              "f1": 0.16184971098265896,
+              "tp": 14,
+              "fp": 90,
+              "fn": 55
+            }
+          },
+          "no_output_passages": 4
+        },
+        {
+          "threshold": 0.7,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.2874617737003058,
+            "recall": 0.3686274509803922,
+            "f1": 0.3230240549828179,
+            "tp": 188,
+            "fp": 466,
+            "fn": 322
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.3113879003558719,
+              "recall": 0.3968253968253968,
+              "f1": 0.3489531405782652,
+              "tp": 175,
+              "fp": 387,
+              "fn": 266
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.14130434782608695,
+              "recall": 0.18840579710144928,
+              "f1": 0.16149068322981366,
+              "tp": 13,
+              "fp": 79,
+              "fn": 56
+            }
+          },
+          "no_output_passages": 8
+        },
+        {
+          "threshold": 0.8,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.3202846975088968,
+            "recall": 0.35294117647058826,
+            "f1": 0.3358208955223881,
+            "tp": 180,
+            "fp": 382,
+            "fn": 330
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.3498964803312629,
+              "recall": 0.3832199546485261,
+              "f1": 0.3658008658008658,
+              "tp": 169,
+              "fp": 314,
+              "fn": 272
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.13924050632911392,
+              "recall": 0.15942028985507245,
+              "f1": 0.14864864864864866,
+              "tp": 11,
+              "fp": 68,
+              "fn": 58
+            }
+          },
+          "no_output_passages": 37
+        },
+        {
+          "threshold": 0.85,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.3403846153846154,
+            "recall": 0.34705882352941175,
+            "f1": 0.34368932038834954,
+            "tp": 177,
+            "fp": 343,
+            "fn": 333
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.3713646532438479,
+              "recall": 0.3764172335600907,
+              "f1": 0.3738738738738739,
+              "tp": 166,
+              "fp": 281,
+              "fn": 275
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.1506849315068493,
+              "recall": 0.15942028985507245,
+              "f1": 0.15492957746478872,
+              "tp": 11,
+              "fp": 62,
+              "fn": 58
+            }
+          },
+          "no_output_passages": 54
+        },
+        {
+          "threshold": 0.9,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.3830734966592428,
+            "recall": 0.33725490196078434,
+            "f1": 0.3587069864442127,
+            "tp": 172,
+            "fp": 277,
+            "fn": 338
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.421875,
+              "recall": 0.3673469387755102,
+              "f1": 0.3927272727272727,
+              "tp": 162,
+              "fp": 222,
+              "fn": 279
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.15384615384615385,
+              "recall": 0.14492753623188406,
+              "f1": 0.14925373134328357,
+              "tp": 10,
+              "fp": 55,
+              "fn": 59
+            }
+          },
+          "no_output_passages": 87
+        },
+        {
+          "threshold": 0.95,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.44662921348314605,
+            "recall": 0.31176470588235294,
+            "f1": 0.3672055427251732,
+            "tp": 159,
+            "fp": 197,
+            "fn": 351
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.487012987012987,
+              "recall": 0.3401360544217687,
+              "f1": 0.40053404539385845,
+              "tp": 150,
+              "fp": 158,
+              "fn": 291
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.1875,
+              "recall": 0.13043478260869565,
+              "f1": 0.15384615384615385,
+              "tp": 9,
+              "fp": 39,
+              "fn": 60
+            }
+          },
+          "no_output_passages": 147
+        }
+      ],
+      "selected": {
+        "threshold": 0.5,
+        "eligible": true,
+        "strict_event": {
+          "precision": 0.25654450261780104,
+          "recall": 0.3843137254901961,
+          "f1": 0.3076923076923077,
+          "tp": 196,
+          "fp": 568,
+          "fn": 314
+        },
+        "per_event_type": {
+          "Adverse_event": {
+            "precision": 0.2797527047913447,
+            "recall": 0.41043083900226757,
+            "f1": 0.3327205882352941,
+            "tp": 181,
+            "fp": 466,
+            "fn": 260
+          },
+          "Potential_therapeutic_event": {
+            "precision": 0.1282051282051282,
+            "recall": 0.21739130434782608,
+            "f1": 0.16129032258064516,
+            "tp": 15,
+            "fp": 102,
+            "fn": 54
+          }
+        },
+        "no_output_passages": 0
+      }
+    },
+    "biomedbert_trigger_ce": {
+      "selection_split": "model_selection",
+      "candidates": [
+        {
+          "threshold": 0.0,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.41379310344827586,
+            "recall": 0.3764705882352941,
+            "f1": 0.3942505133470226,
+            "tp": 192,
+            "fp": 272,
+            "fn": 318
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.43779904306220097,
+              "recall": 0.41496598639455784,
+              "f1": 0.42607683352735737,
+              "tp": 183,
+              "fp": 235,
+              "fn": 258
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.1956521739130435,
+              "recall": 0.13043478260869565,
+              "f1": 0.1565217391304348,
+              "tp": 9,
+              "fp": 37,
+              "fn": 60
+            }
+          },
+          "no_output_passages": 50
+        },
+        {
+          "threshold": 0.5,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.42290748898678415,
+            "recall": 0.3764705882352941,
+            "f1": 0.3983402489626556,
+            "tp": 192,
+            "fp": 262,
+            "fn": 318
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.4430992736077482,
+              "recall": 0.41496598639455784,
+              "f1": 0.42857142857142855,
+              "tp": 183,
+              "fp": 230,
+              "fn": 258
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.21951219512195122,
+              "recall": 0.13043478260869565,
+              "f1": 0.16363636363636364,
+              "tp": 9,
+              "fp": 32,
+              "fn": 60
+            }
+          },
+          "no_output_passages": 56
+        },
+        {
+          "threshold": 0.6,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.44554455445544555,
+            "recall": 0.35294117647058826,
+            "f1": 0.3938730853391685,
+            "tp": 180,
+            "fp": 224,
+            "fn": 330
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.46380697050938335,
+              "recall": 0.3922902494331066,
+              "f1": 0.4250614250614251,
+              "tp": 173,
+              "fp": 200,
+              "fn": 268
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.22580645161290322,
+              "recall": 0.10144927536231885,
+              "f1": 0.14,
+              "tp": 7,
+              "fp": 24,
+              "fn": 62
+            }
+          },
+          "no_output_passages": 95
+        },
+        {
+          "threshold": 0.7,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.4756756756756757,
+            "recall": 0.34509803921568627,
+            "f1": 0.4,
+            "tp": 176,
+            "fp": 194,
+            "fn": 334
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.4941860465116279,
+              "recall": 0.3854875283446712,
+              "f1": 0.43312101910828027,
+              "tp": 170,
+              "fp": 174,
+              "fn": 271
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.23076923076923078,
+              "recall": 0.08695652173913043,
+              "f1": 0.12631578947368421,
+              "tp": 6,
+              "fp": 20,
+              "fn": 63
+            }
+          },
+          "no_output_passages": 122
+        },
+        {
+          "threshold": 0.8,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.50625,
+            "recall": 0.3176470588235294,
+            "f1": 0.39036144578313253,
+            "tp": 162,
+            "fp": 158,
+            "fn": 348
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5180327868852459,
+              "recall": 0.35827664399092973,
+              "f1": 0.42359249329758714,
+              "tp": 158,
+              "fp": 147,
+              "fn": 283
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.26666666666666666,
+              "recall": 0.057971014492753624,
+              "f1": 0.09523809523809523,
+              "tp": 4,
+              "fp": 11,
+              "fn": 65
+            }
+          },
+          "no_output_passages": 170
+        },
+        {
+          "threshold": 0.85,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.5310344827586206,
+            "recall": 0.30196078431372547,
+            "f1": 0.385,
+            "tp": 154,
+            "fp": 136,
+            "fn": 356
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5352112676056338,
+              "recall": 0.34467120181405897,
+              "f1": 0.4193103448275862,
+              "tp": 152,
+              "fp": 132,
+              "fn": 289
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.3333333333333333,
+              "recall": 0.028985507246376812,
+              "f1": 0.05333333333333334,
+              "tp": 2,
+              "fp": 4,
+              "fn": 67
+            }
+          },
+          "no_output_passages": 198
+        },
+        {
+          "threshold": 0.9,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.562992125984252,
+            "recall": 0.2803921568627451,
+            "f1": 0.3743455497382199,
+            "tp": 143,
+            "fp": 111,
+            "fn": 367
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5595238095238095,
+              "recall": 0.3197278911564626,
+              "f1": 0.4069264069264069,
+              "tp": 141,
+              "fp": 111,
+              "fn": 300
+            },
+            "Potential_therapeutic_event": {
+              "precision": 1.0,
+              "recall": 0.028985507246376812,
+              "f1": 0.056338028169014086,
+              "tp": 2,
+              "fp": 0,
+              "fn": 67
+            }
+          },
+          "no_output_passages": 234
+        },
+        {
+          "threshold": 0.95,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.6020408163265306,
+            "recall": 0.23137254901960785,
+            "f1": 0.3342776203966006,
+            "tp": 118,
+            "fp": 78,
+            "fn": 392
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.6020408163265306,
+              "recall": 0.2675736961451247,
+              "f1": 0.3704866562009419,
+              "tp": 118,
+              "fp": 78,
+              "fn": 323
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 69
+            }
+          },
+          "no_output_passages": 291
+        }
+      ],
+      "selected": null
+    },
+    "biomedbert_all_ce": {
+      "selection_split": "model_selection",
+      "candidates": [
+        {
+          "threshold": 0.0,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.4465811965811966,
+            "recall": 0.40980392156862744,
+            "f1": 0.4274028629856851,
+            "tp": 209,
+            "fp": 259,
+            "fn": 301
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.454337899543379,
+              "recall": 0.4512471655328798,
+              "f1": 0.4527872582480091,
+              "tp": 199,
+              "fp": 239,
+              "fn": 242
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.3333333333333333,
+              "recall": 0.14492753623188406,
+              "f1": 0.20202020202020202,
+              "tp": 10,
+              "fp": 20,
+              "fn": 59
+            }
+          },
+          "no_output_passages": 56
+        },
+        {
+          "threshold": 0.5,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.4504310344827586,
+            "recall": 0.40980392156862744,
+            "f1": 0.42915811088295686,
+            "tp": 209,
+            "fp": 255,
+            "fn": 301
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.45642201834862384,
+              "recall": 0.4512471655328798,
+              "f1": 0.45381984036488027,
+              "tp": 199,
+              "fp": 237,
+              "fn": 242
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.35714285714285715,
+              "recall": 0.14492753623188406,
+              "f1": 0.20618556701030927,
+              "tp": 10,
+              "fp": 18,
+              "fn": 59
+            }
+          },
+          "no_output_passages": 60
+        },
+        {
+          "threshold": 0.6,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.48668280871670705,
+            "recall": 0.3941176470588235,
+            "f1": 0.4355362946912243,
+            "tp": 201,
+            "fp": 212,
+            "fn": 309
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.4897959183673469,
+              "recall": 0.43537414965986393,
+              "f1": 0.460984393757503,
+              "tp": 192,
+              "fp": 200,
+              "fn": 249
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.42857142857142855,
+              "recall": 0.13043478260869565,
+              "f1": 0.2,
+              "tp": 9,
+              "fp": 12,
+              "fn": 60
+            }
+          },
+          "no_output_passages": 87
+        },
+        {
+          "threshold": 0.7,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.5236768802228412,
+            "recall": 0.3686274509803922,
+            "f1": 0.4326812428078251,
+            "tp": 188,
+            "fp": 171,
+            "fn": 322
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.523121387283237,
+              "recall": 0.41043083900226757,
+              "f1": 0.4599745870393901,
+              "tp": 181,
+              "fp": 165,
+              "fn": 260
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.5384615384615384,
+              "recall": 0.10144927536231885,
+              "f1": 0.17073170731707318,
+              "tp": 7,
+              "fp": 6,
+              "fn": 62
+            }
+          },
+          "no_output_passages": 133
+        },
+        {
+          "threshold": 0.8,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.5656565656565656,
+            "recall": 0.32941176470588235,
+            "f1": 0.4163568773234201,
+            "tp": 168,
+            "fp": 129,
+            "fn": 342
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.565068493150685,
+              "recall": 0.3741496598639456,
+              "f1": 0.45020463847203274,
+              "tp": 165,
+              "fp": 127,
+              "fn": 276
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.6,
+              "recall": 0.043478260869565216,
+              "f1": 0.08108108108108109,
+              "tp": 3,
+              "fp": 2,
+              "fn": 66
+            }
+          },
+          "no_output_passages": 191
+        },
+        {
+          "threshold": 0.85,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.5827067669172933,
+            "recall": 0.30392156862745096,
+            "f1": 0.39948453608247425,
+            "tp": 155,
+            "fp": 111,
+            "fn": 355
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5833333333333334,
+              "recall": 0.3492063492063492,
+              "f1": 0.4368794326241135,
+              "tp": 154,
+              "fp": 110,
+              "fn": 287
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.5,
+              "recall": 0.014492753623188406,
+              "f1": 0.028169014084507043,
+              "tp": 1,
+              "fp": 1,
+              "fn": 68
+            }
+          },
+          "no_output_passages": 221
+        },
+        {
+          "threshold": 0.9,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.6059322033898306,
+            "recall": 0.2803921568627451,
+            "f1": 0.38337801608579086,
+            "tp": 143,
+            "fp": 93,
+            "fn": 367
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.6085106382978723,
+              "recall": 0.3242630385487528,
+              "f1": 0.4230769230769231,
+              "tp": 143,
+              "fp": 92,
+              "fn": 298
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 69
+            }
+          },
+          "no_output_passages": 251
+        },
+        {
+          "threshold": 0.95,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.6411764705882353,
+            "recall": 0.21372549019607842,
+            "f1": 0.3205882352941177,
+            "tp": 109,
+            "fp": 61,
+            "fn": 401
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.6411764705882353,
+              "recall": 0.2471655328798186,
+              "f1": 0.3567921440261866,
+              "tp": 109,
+              "fp": 61,
+              "fn": 332
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 69
+            }
+          },
+          "no_output_passages": 317
+        }
+      ],
+      "selected": null
+    },
+    "biomedbert_therapeutic_ce": {
+      "selection_split": "model_selection",
+      "candidates": [
+        {
+          "threshold": 0.0,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.41398865784499056,
+            "recall": 0.4294117647058823,
+            "f1": 0.4215591915303176,
+            "tp": 219,
+            "fp": 310,
+            "fn": 291
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.45054945054945056,
+              "recall": 0.46485260770975056,
+              "f1": 0.4575892857142857,
+              "tp": 205,
+              "fp": 250,
+              "fn": 236
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.1891891891891892,
+              "recall": 0.2028985507246377,
+              "f1": 0.1958041958041958,
+              "tp": 14,
+              "fp": 60,
+              "fn": 55
+            }
+          },
+          "no_output_passages": 18
+        },
+        {
+          "threshold": 0.5,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.42003853564547206,
+            "recall": 0.42745098039215684,
+            "f1": 0.423712342079689,
+            "tp": 218,
+            "fp": 301,
+            "fn": 292
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.45657015590200445,
+              "recall": 0.46485260770975056,
+              "f1": 0.4606741573033708,
+              "tp": 205,
+              "fp": 244,
+              "fn": 236
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.18571428571428572,
+              "recall": 0.18840579710144928,
+              "f1": 0.18705035971223022,
+              "tp": 13,
+              "fp": 57,
+              "fn": 56
+            }
+          },
+          "no_output_passages": 25
+        },
+        {
+          "threshold": 0.6,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.43983402489626555,
+            "recall": 0.41568627450980394,
+            "f1": 0.4274193548387097,
+            "tp": 212,
+            "fp": 270,
+            "fn": 298
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.475177304964539,
+              "recall": 0.4557823129251701,
+              "f1": 0.4652777777777778,
+              "tp": 201,
+              "fp": 222,
+              "fn": 240
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.1864406779661017,
+              "recall": 0.15942028985507245,
+              "f1": 0.171875,
+              "tp": 11,
+              "fp": 48,
+              "fn": 58
+            }
+          },
+          "no_output_passages": 35
+        },
+        {
+          "threshold": 0.7,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.45495495495495497,
+            "recall": 0.396078431372549,
+            "f1": 0.42348008385744235,
+            "tp": 202,
+            "fp": 242,
+            "fn": 308
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.49238578680203043,
+              "recall": 0.4399092970521542,
+              "f1": 0.46467065868263474,
+              "tp": 194,
+              "fp": 200,
+              "fn": 247
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.16,
+              "recall": 0.11594202898550725,
+              "f1": 0.13445378151260504,
+              "tp": 8,
+              "fp": 42,
+              "fn": 61
+            }
+          },
+          "no_output_passages": 59
+        },
+        {
+          "threshold": 0.8,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.495,
+            "recall": 0.38823529411764707,
+            "f1": 0.4351648351648352,
+            "tp": 198,
+            "fp": 202,
+            "fn": 312
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5352112676056338,
+              "recall": 0.4308390022675737,
+              "f1": 0.47738693467336685,
+              "tp": 190,
+              "fp": 165,
+              "fn": 251
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.17777777777777778,
+              "recall": 0.11594202898550725,
+              "f1": 0.14035087719298245,
+              "tp": 8,
+              "fp": 37,
+              "fn": 61
+            }
+          },
+          "no_output_passages": 99
+        },
+        {
+          "threshold": 0.85,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.5108695652173914,
+            "recall": 0.3686274509803922,
+            "f1": 0.428246013667426,
+            "tp": 188,
+            "fp": 180,
+            "fn": 322
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.556923076923077,
+              "recall": 0.41043083900226757,
+              "f1": 0.4725848563968668,
+              "tp": 181,
+              "fp": 144,
+              "fn": 260
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.16279069767441862,
+              "recall": 0.10144927536231885,
+              "f1": 0.125,
+              "tp": 7,
+              "fp": 36,
+              "fn": 62
+            }
+          },
+          "no_output_passages": 128
+        },
+        {
+          "threshold": 0.9,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.546583850931677,
+            "recall": 0.34509803921568627,
+            "f1": 0.4230769230769231,
+            "tp": 176,
+            "fp": 146,
+            "fn": 334
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5868055555555556,
+              "recall": 0.3832199546485261,
+              "f1": 0.46364883401920437,
+              "tp": 169,
+              "fp": 119,
+              "fn": 272
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.20588235294117646,
+              "recall": 0.10144927536231885,
+              "f1": 0.13592233009708737,
+              "tp": 7,
+              "fp": 27,
+              "fn": 62
+            }
+          },
+          "no_output_passages": 170
+        },
+        {
+          "threshold": 0.95,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.5946969696969697,
+            "recall": 0.307843137254902,
+            "f1": 0.40568475452196384,
+            "tp": 157,
+            "fp": 107,
+            "fn": 353
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.6153846153846154,
+              "recall": 0.34467120181405897,
+              "f1": 0.4418604651162791,
+              "tp": 152,
+              "fp": 95,
+              "fn": 289
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.29411764705882354,
+              "recall": 0.07246376811594203,
+              "f1": 0.11627906976744186,
+              "tp": 5,
+              "fp": 12,
+              "fn": 64
+            }
+          },
+          "no_output_passages": 225
+        }
+      ],
+      "selected": null
+    },
+    "biomedbert_therapeutic5_ce": {
+      "selection_split": "model_selection",
+      "candidates": [
+        {
+          "threshold": 0.0,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.408,
+            "recall": 0.4,
+            "f1": 0.403960396039604,
+            "tp": 204,
+            "fp": 296,
+            "fn": 306
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.45047169811320753,
+              "recall": 0.4331065759637188,
+              "f1": 0.4416184971098266,
+              "tp": 191,
+              "fp": 233,
+              "fn": 250
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.17105263157894737,
+              "recall": 0.18840579710144928,
+              "f1": 0.1793103448275862,
+              "tp": 13,
+              "fp": 63,
+              "fn": 56
+            }
+          },
+          "no_output_passages": 45
+        },
+        {
+          "threshold": 0.5,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.4163265306122449,
+            "recall": 0.4,
+            "f1": 0.408,
+            "tp": 204,
+            "fp": 286,
+            "fn": 306
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.45913461538461536,
+              "recall": 0.4331065759637188,
+              "f1": 0.4457409568261377,
+              "tp": 191,
+              "fp": 225,
+              "fn": 250
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.17567567567567569,
+              "recall": 0.18840579710144928,
+              "f1": 0.18181818181818182,
+              "tp": 13,
+              "fp": 61,
+              "fn": 56
+            }
+          },
+          "no_output_passages": 49
+        },
+        {
+          "threshold": 0.6,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.4376417233560091,
+            "recall": 0.3784313725490196,
+            "f1": 0.4058885383806519,
+            "tp": 193,
+            "fp": 248,
+            "fn": 317
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.4864864864864865,
+              "recall": 0.40816326530612246,
+              "f1": 0.4438964241676942,
+              "tp": 180,
+              "fp": 190,
+              "fn": 261
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.18309859154929578,
+              "recall": 0.18840579710144928,
+              "f1": 0.18571428571428572,
+              "tp": 13,
+              "fp": 58,
+              "fn": 56
+            }
+          },
+          "no_output_passages": 78
+        },
+        {
+          "threshold": 0.7,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.4725848563968668,
+            "recall": 0.35490196078431374,
+            "f1": 0.4053751399776036,
+            "tp": 181,
+            "fp": 202,
+            "fn": 329
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5216049382716049,
+              "recall": 0.3832199546485261,
+              "f1": 0.4418300653594771,
+              "tp": 169,
+              "fp": 155,
+              "fn": 272
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.2033898305084746,
+              "recall": 0.17391304347826086,
+              "f1": 0.1875,
+              "tp": 12,
+              "fp": 47,
+              "fn": 57
+            }
+          },
+          "no_output_passages": 124
+        },
+        {
+          "threshold": 0.8,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.5030674846625767,
+            "recall": 0.3215686274509804,
+            "f1": 0.3923444976076555,
+            "tp": 164,
+            "fp": 162,
+            "fn": 346
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5503597122302158,
+              "recall": 0.3469387755102041,
+              "f1": 0.42559109874826145,
+              "tp": 153,
+              "fp": 125,
+              "fn": 288
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.22916666666666666,
+              "recall": 0.15942028985507245,
+              "f1": 0.18803418803418803,
+              "tp": 11,
+              "fp": 37,
+              "fn": 58
+            }
+          },
+          "no_output_passages": 171
+        },
+        {
+          "threshold": 0.85,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.5310344827586206,
+            "recall": 0.30196078431372547,
+            "f1": 0.385,
+            "tp": 154,
+            "fp": 136,
+            "fn": 356
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5766129032258065,
+              "recall": 0.3242630385487528,
+              "f1": 0.41509433962264153,
+              "tp": 143,
+              "fp": 105,
+              "fn": 298
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.2619047619047619,
+              "recall": 0.15942028985507245,
+              "f1": 0.1981981981981982,
+              "tp": 11,
+              "fp": 31,
+              "fn": 58
+            }
+          },
+          "no_output_passages": 205
+        },
+        {
+          "threshold": 0.9,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.547244094488189,
+            "recall": 0.2725490196078431,
+            "f1": 0.36387434554973824,
+            "tp": 139,
+            "fp": 115,
+            "fn": 371
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.5925925925925926,
+              "recall": 0.29024943310657597,
+              "f1": 0.3896499238964992,
+              "tp": 128,
+              "fp": 88,
+              "fn": 313
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.2894736842105263,
+              "recall": 0.15942028985507245,
+              "f1": 0.205607476635514,
+              "tp": 11,
+              "fp": 27,
+              "fn": 58
+            }
+          },
+          "no_output_passages": 239
+        },
+        {
+          "threshold": 0.95,
+          "eligible": false,
+          "strict_event": {
+            "precision": 0.592391304347826,
+            "recall": 0.21372549019607842,
+            "f1": 0.31412103746397696,
+            "tp": 109,
+            "fp": 75,
+            "fn": 401
+          },
+          "per_event_type": {
+            "Adverse_event": {
+              "precision": 0.6380368098159509,
+              "recall": 0.23582766439909297,
+              "f1": 0.3443708609271523,
+              "tp": 104,
+              "fp": 59,
+              "fn": 337
+            },
+            "Potential_therapeutic_event": {
+              "precision": 0.23809523809523808,
+              "recall": 0.07246376811594203,
+              "f1": 0.1111111111111111,
+              "tp": 5,
+              "fp": 16,
+              "fn": 64
+            }
+          },
+          "no_output_passages": 304
+        }
+      ],
+      "selected": null
+    }
+  },
+  "selected_source": "biomedbert",
+  "selected_threshold": 0.5,
+  "selected_metrics": {
+    "precision": 0.25654450261780104,
+    "recall": 0.3843137254901961,
+    "f1": 0.3076923076923077,
+    "tp": 196,
+    "fp": 568,
+    "fn": 314
+  },
+  "data_sha256": "9ded33f3c22c12020ac5d881cf9c6f18520921757b441902ca7bfdae92e2606f",
+  "test_used": false,
+  "policy_used": false
+}
