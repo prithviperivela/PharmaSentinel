@@ -14,6 +14,46 @@ See [RESULTS.md](RESULTS.md) for the frozen four-model comparison and confidence
 The primary measures are strict core-event F1 and error capture at a 25% passage budget.
 Describe the latter as a benchmark review simulation, never as measured operational savings.
 
+## Research lineage and evaluation answer
+
+The [PHEE paper](https://aclanthology.org/2022.emnlp-main.376/) motivates the
+pharmacovigilance event task and provides the original dataset and schema. We used
+the revised source annotations linked from the authors' later
+[empirical study](https://aclanthology.org/2024.eacl-short.30/). Microsoft's
+[BiomedBERT model](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext)
+supplies the pretrained biomedical encoder, based on
+[Gu et al.](https://arxiv.org/abs/2007.15779). Confidence calibration is an
+established idea discussed by [Guo et al.](https://arxiv.org/abs/1706.04599);
+our actual implementation uses a regularized logistic model on candidate features.
+We built the task-specific heads, data audit, reduced event evaluator, ablations,
+calibration/review experiment and viewer. We do not claim to have invented the
+dataset, transformer or calibration method.
+
+**A useful 45-second answer:** “I chose exact complete-event F1 as the primary
+measure because a pharmacovigilance event is useful only when the event type and
+its trigger, drug and effect evidence are connected correctly. A system can find
+the drug name yet link it to the wrong effect, so a drug-span score alone would
+overstate performance. I match predictions one-to-one against gold events, count
+duplicates as false positives and misses as false negatives, and report precision,
+recall and the adverse/therapeutic breakdown. I kept separate development subsets
+for model choice, confidence calibration and review-policy choice, froze those
+decisions, then scored 967 eligible test passages once. The selected mode reached
+43.7% strict F1 versus 28.5% for our original transformer. Its therapeutic recall
+was only 18.3%, so I present this as an evaluated research prototype.”
+
+**If asked about published PHEE scores:** The original paper reports trigger and
+argument extraction separately and includes a larger hierarchical schema. Our
+reduced exact *joint* event score requires all retained fields to agree at once;
+it is not numerically comparable with their trigger, argument or token-overlap F1.
+The relaxed overlap score and 83.2% drug-span precision are diagnostics, not
+replacements for the complete-event headline.
+
+**If asked about uncertainty:** The 95% interval resamples source-prefix groups
+with fixed trained models. It captures sampling variation under that grouping,
+not variation across training seeds, hospital populations or clinical reviewers.
+The 25% review result assumes an ideal reviewer finds every benchmark error in
+a selected passage; it is not measured time savings.
+
 ## Measured project bullets
 
 Use these only when you can explain the implementation and your own contributions:
