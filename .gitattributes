@@ -1,0 +1,2 @@
+# Preserve the exact bytes used by the frozen experiment's SHA-256 checks.
+* -text
